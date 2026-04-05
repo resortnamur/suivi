@@ -1,0 +1,2166 @@
+{
+  "categories": [
+    {
+      "name": "Aménagements divers",
+      "tasks": [
+        {
+          "id": "amenagements-divers-clim-caisse",
+          "category": "Aménagements divers",
+          "name": "Clim caisse",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "nécessité de travaux importants pour relier la clim à la caisse - (clim portable renvoie la chaleur à l'intérieur)"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "amenagements-divers-securite-toitures",
+          "category": "Aménagements divers",
+          "name": "Sécurité toitures",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "?"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "Signature du devis - date",
+              "date": "2026-05-01",
+              "status": "À faire",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Déchets",
+      "tasks": [
+        {
+          "id": "dechets-parc-a-containers",
+          "category": "Déchets",
+          "name": "Parc à Containers",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Veolia"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "nouvelle disposition",
+              "date": "2026-04-01",
+              "status": "Terminé",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "dechets-garage-evacuations-des-dechets",
+          "category": "Déchets",
+          "name": "Garage évacuations des déchets",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "évacuation régulière en fonction de l'encombrement"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "établir une procédure",
+              "date": "2026-07-01",
+              "status": "À faire",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "dechets-dechets-garage-bacs-a-dechets",
+          "category": "Déchets",
+          "name": "Déchets Garage - bacs à déchets",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "installation de bacs à cartons dans les différentes réserves",
+              "date": "2026-04-01",
+              "status": "Terminé",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "dechets-colis-reception",
+          "category": "Déchets",
+          "name": "Colis Réception",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "placer les cartons dans le bac - gros colis au quai de livraison"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "placement d'un bac à carton",
+              "date": "2026-04-15",
+              "status": "À faire",
+              "priority": 1,
+              "notes": "face à la Blue Ocean",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Électricité",
+      "tasks": [
+        {
+          "id": "electricite-suivi-en-cas-de-coupure",
+          "category": "Électricité",
+          "name": "Suivi en cas de coupure",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "suivi par Equans ?",
+              "date": "2026-04-15",
+              "status": "En cours",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "communiquer la procédure aux Duty Managers",
+              "date": "2026-04-15",
+              "status": "À faire",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Entretien Matériel",
+      "tasks": [
+        {
+          "id": "entretien-materiel-urinoirs",
+          "category": "Entretien Matériel",
+          "name": "Urinoirs",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Bernard Wallon"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "produit à mettre régulièrement"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "trouver le bon produit",
+              "date": "2026-04-15",
+              "status": "À faire",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-serrures-sans-code",
+          "category": "Entretien Matériel",
+          "name": "Serrures sans code",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Axces"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-serrures-avec-code",
+          "category": "Entretien Matériel",
+          "name": "Serrures avec code",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "?"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "établir une procédure",
+              "date": "2026-07-01",
+              "status": "À faire",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-proprete-moquettes",
+          "category": "Entretien Matériel",
+          "name": "Propreté Moquettes",
+          "accountable": "XX",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "HK nettoie d'abord avec son produit - si pb --> intervention de la maintenance"
+              ]
+            },
+            "stock": {
+              "notes": [
+                "?"
+              ]
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-proprete-matelas",
+          "category": "Entretien Matériel",
+          "name": "Propreté Matelas",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "?"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "établir une procédure",
+              "date": "2026-06-01",
+              "status": "À faire",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-proprete-murs-peintures",
+          "category": "Entretien Matériel",
+          "name": "Propreté Murs (peintures)",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "peintre externe"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "tous les un an et demi"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "",
+              "status": "",
+              "priority": 0,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-coffres-piles",
+          "category": "Entretien Matériel",
+          "name": "Coffres piles",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "?"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "remplacement anticipé des piles ?"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "établir une procédure",
+              "date": "2026-04-20",
+              "status": "À faire",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-tablettes-lavabo",
+          "category": "Entretien Matériel",
+          "name": "Tablettes lavabo",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "50% réalisé",
+              "date": "2026-04-15",
+              "status": "En cours",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "100% réalisé",
+              "date": "2026-07-15",
+              "status": "En cours",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-coffres-autocollants",
+          "category": "Entretien Matériel",
+          "name": "Coffres autocollants",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Colorisprint"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "50% modifié",
+              "date": "2026-04-10",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "100% modifié",
+              "date": "2026-07-01",
+              "status": "À faire",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-pommeau-des-douches",
+          "category": "Entretien Matériel",
+          "name": "Pommeau des douches",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "50% terminé",
+              "date": "2026-04-10",
+              "status": "",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "100% terminé",
+              "date": "2026-07-31",
+              "status": "",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-materiel-mis-a-disposition-des-clients",
+          "category": "Entretien Matériel",
+          "name": "Matériel mis à disposition des clients",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": [
+                "?"
+              ]
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "établir une procédure",
+              "date": "2026-06-01",
+              "status": "À faire",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-televiseurs-encadrements",
+          "category": "Entretien Matériel",
+          "name": "Téléviseurs encadrements",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "50% réalisé",
+              "date": "2026-05-15",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "100% réalisé",
+              "date": "2026-07-15",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-televiseurs-chromecast",
+          "category": "Entretien Matériel",
+          "name": "Téléviseurs chromecast",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Screen Service"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-ecrans-des-salles",
+          "category": "Entretien Matériel",
+          "name": "Écrans des salles",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Barco",
+                "Dune"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": [
+                "?"
+              ]
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "commander de nouveaux bitougnous",
+              "date": "2026-05-06",
+              "status": "À faire",
+              "priority": 1,
+              "notes": "CVK contacte Dune",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-portes-casino",
+          "category": "Entretien Matériel",
+          "name": "Portes casino",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "Changement du moteur",
+              "date": "2026-04-07",
+              "status": "En attente",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "entretien-materiel-portillons-casino",
+          "category": "Entretien Matériel",
+          "name": "Portillons casino",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Dorma (portiques)",
+                "JMR (cellules de détection)"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": [
+                "?"
+              ]
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "amélioration du mécanisme",
+              "date": "2026-07-01",
+              "status": "À faire",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Équipements",
+      "tasks": [
+        {
+          "id": "equipements-tenues-staff",
+          "category": "Équipements",
+          "name": "Tenues staff",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "equipements-diable-electrique",
+          "category": "Équipements",
+          "name": "Diable électrique",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "achat",
+              "date": "2026-04-01",
+              "status": "Terminé",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "livraison",
+              "date": "2026-06-10",
+              "status": "En attente",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "equipements-echelles",
+          "category": "Équipements",
+          "name": "Échelles",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "livraison",
+              "date": "2026-04-01",
+              "status": "Terminé",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Nettoyage",
+      "tasks": [
+        {
+          "id": "nettoyage-nettoyage-des-terrasses-nettoyage-annuel",
+          "category": "Nettoyage",
+          "name": "Nettoyage des terrasses - nettoyage annuel",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "nettoyage annuel",
+              "date": "2026-05-01",
+              "status": "À faire",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "nettoyage-nettoyage-des-terrasses-nettoyage-quotidien",
+          "category": "Nettoyage",
+          "name": "Nettoyage des terrasses - nettoyage quotidien",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "établir une procédure",
+              "date": "2026-06-01",
+              "status": "À faire",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Prévention",
+      "tasks": [
+        {
+          "id": "prevention-extincteurs",
+          "category": "Prévention",
+          "name": "Extincteurs",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "?"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "Révision annuelle",
+              "date": "2026-04-01",
+              "status": "Terminé",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "Mise à jour des plans",
+              "date": "2026-05-10",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "prevention-acces-pompiers",
+          "category": "Prévention",
+          "name": "Accès pompiers",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": [
+                "boîtier réception"
+              ]
+            },
+            "procedure": {
+              "notes": [
+                "casser le boîtier en cas d'urgence"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "1",
+              "date": "2026-04-15",
+              "status": "En attente",
+              "priority": 1,
+              "notes": "visite du capitaine des pompiers",
+              "notesOpen": true
+            },
+            {
+              "label": "double des clés",
+              "date": "2026-04-15",
+              "status": "À faire",
+              "priority": 1,
+              "notes": "cf. Hugues",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Régie streaming",
+      "tasks": [
+        {
+          "id": "regie-streaming-regie-renovation",
+          "category": "Régie streaming",
+          "name": "Régie rénovation",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "étude des besoins",
+              "date": "2026-05-01",
+              "status": "À étudier",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "lien avec l'espace croupiers",
+              "date": "2026-05-01",
+              "status": "À étudier",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "débuter les travaux",
+              "date": "2026-07-01",
+              "status": "À faire",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "regie-streaming-cloisons",
+          "category": "Régie streaming",
+          "name": "Cloisons",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Wellness",
+      "tasks": [
+        {
+          "id": "wellness-wellness-travaux-d-etancheite",
+          "category": "Wellness",
+          "name": "Wellness travaux d'étanchéité",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "débordement",
+              "date": "2026-04-04",
+              "status": "En cours",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "wellness privatif",
+              "date": "",
+              "status": "",
+              "priority": 0,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "wellness public",
+              "date": "",
+              "status": "",
+              "priority": 0,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "local technique",
+              "date": "",
+              "status": "",
+              "priority": 0,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        }
+      ]
+    }
+  ]
+}
