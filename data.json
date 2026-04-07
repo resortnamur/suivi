@@ -1930,10 +1930,18 @@
               "priority": 1,
               "notes": "cf. Hugues",
               "notesOpen": true
+            },
+            {
+              "label": "test",
+              "date": "2026-04-06",
+              "status": "À étudier",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
             }
           ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 2
           }
         }
       ]
