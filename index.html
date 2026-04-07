@@ -335,6 +335,7 @@
     <div class="topbar">
       <div class="topbar-left" id="breadcrumbs"></div>
       <div class="topbar-right">
+        <button id="fullscreenBtn" type="button">Plein écran</button>
         <span class="readonly-chip" id="modeChip">Consultation</span>
         <button id="adminBtn" class="admin-btn" type="button">Admin</button>
       </div>
@@ -378,9 +379,24 @@
       ]
     };
 
+    function createBaseView(overrides = {}) {
+      return {
+        screen: 'dashboard',
+        categoryId: null,
+        taskId: null,
+        showUpcomingDeadlines: false,
+        showCompletedTasks: false,
+        homePriorityFilter: 'critical',
+        allTasksAccountableFilter: 'all',
+        allTasksCategoryFilter: 'all',
+        calendarMonthOffset: 0,
+        ...overrides
+      };
+    }
+
     let data = deepClone(defaultData);
     let currentDataSource = 'default';
-    let view = { screen: 'dashboard', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: 'critical', allTasksAccountableFilter: 'all', calendarMonthOffset: 0 };
+    let view = createBaseView();
     let isAdminMode = sessionStorage.getItem(ADMIN_SESSION_KEY) === '1';
 
     function setAdminMode(nextState) {
@@ -585,7 +601,7 @@
       localStorage.removeItem(LOCAL_DATA_KEY);
       localStorage.removeItem(STORAGE_KEY);
       data = await loadData();
-      view = { screen: 'dashboard', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: 'critical', allTasksAccountableFilter: 'all', calendarMonthOffset: 0 };
+      view = createBaseView();
       render();
     }
 
@@ -965,7 +981,7 @@
                   <button id="dashboardResetBtn" type="button">Réinitialiser</button>
                 ` : ''}
                 <button class="secondary-cta" type="button" data-nav="calendar">Vue calendrier des échéances</button>
-                <button class="executive-cta" type="button" data-nav="home">Ouvrir l’accueil opérationnel</button>
+                <button class="executive-cta" type="button" data-nav="home">--> Acceuil opérationnel</button>
               </div>
             </div>
 
@@ -1125,10 +1141,25 @@
     function renderAllTasks() {
       const accountableOptions = getAllTaskAccountables();
       const selectedAccountable = view.allTasksAccountableFilter || 'all';
-      const tasks = getAllTasksAlphabetical().filter(item => selectedAccountable === 'all' || String(item.accountable || '').trim().toUpperCase() === selectedAccountable);
+      const selectedCategory = view.allTasksCategoryFilter || 'all';
+      const categoryOptions = data.categories
+        .map(category => String(category.name || '').trim())
+        .filter(Boolean)
+        .sort((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
+      const tasks = getAllTasksAlphabetical().filter(item => {
+        const accountableMatch = selectedAccountable === 'all' || String(item.accountable || '').trim().toUpperCase() === selectedAccountable;
+        const categoryMatch = selectedCategory === 'all' || item.categoryName === selectedCategory;
+        return accountableMatch && categoryMatch;
+      });
       return `
         <div class="view-stack">
           <div class="filter-row">
+            <select class="filter-select" data-filter-all-tasks-category="1">
+              <option value="all" ${selectedCategory === 'all' ? 'selected' : ''}>Toutes les catégories</option>
+              ${categoryOptions.map(category => `
+                <option value="${escapeHtml(category)}" ${selectedCategory === category ? 'selected' : ''}>${escapeHtml(category)}</option>
+              `).join('')}
+            </select>
             <select class="filter-select" data-filter-all-tasks-accountable="1">
               <option value="all" ${selectedAccountable === 'all' ? 'selected' : ''}>Tous les accountable</option>
               ${accountableOptions.map(accountable => `
@@ -1571,11 +1602,11 @@
 
     function goBack() {
       if (view.screen === 'task') {
-        view = { screen: 'category', categoryId: view.categoryId, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+        view = createBaseView({ screen: 'category', categoryId: view.categoryId, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'category') {
-        view = { screen: 'categories', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+        view = createBaseView({ screen: 'categories', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'categories' || view.screen === 'all_tasks') {
-        view = { screen: 'dashboard', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+        view = createBaseView({ screen: 'dashboard', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else {
         return;
       }
@@ -1604,7 +1635,7 @@
         }
       });
       nextTask.deadlineUi = { editIndex: -1 };
-      view = { screen: 'task', categoryId: categoryIndex, taskId, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+      view = createBaseView({ screen: 'task', categoryId: categoryIndex, taskId, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
       render();
     }
 
@@ -1632,11 +1663,11 @@
 
     function goForwardPage() {
       if (view.screen === 'dashboard') {
-        view = { screen: 'home', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+        view = createBaseView({ screen: 'home', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'home') {
-        view = { screen: 'categories', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+        view = createBaseView({ screen: 'categories', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'categories') {
-        view = { screen: 'all_tasks', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+        view = createBaseView({ screen: 'all_tasks', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'all_tasks') {
         const first = getAllTasksAlphabetical()[0];
         if (!first) return;
@@ -1650,47 +1681,66 @@
 
     function goBackPage() {
       if (view.screen === 'task') {
-        view = { screen: 'all_tasks', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+        view = createBaseView({ screen: 'all_tasks', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'all_tasks') {
-        view = { screen: 'categories', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+        view = createBaseView({ screen: 'categories', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'categories') {
-        view = { screen: 'home', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+        view = createBaseView({ screen: 'home', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'home') {
-        view = { screen: 'dashboard', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+        view = createBaseView({ screen: 'dashboard', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else {
         return;
       }
       render();
     }
 
+    function updateFullscreenUi() {
+      const fullscreenBtn = document.getElementById('fullscreenBtn');
+      if (!fullscreenBtn) return;
+      fullscreenBtn.textContent = document.fullscreenElement ? 'Quitter le plein écran' : 'Plein écran';
+    }
+
+    async function toggleFullscreen() {
+      try {
+        if (document.fullscreenElement) await document.exitFullscreen();
+        else await document.documentElement.requestFullscreen();
+      } catch (error) {
+        alert('Le plein écran est indisponible sur ce navigateur.');
+      }
+    }
+
     function bindEvents() {
       const adminBtn = document.getElementById('adminBtn');
       if (adminBtn) adminBtn.onclick = () => promptAdminAccess();
 
+      const fullscreenBtn = document.getElementById('fullscreenBtn');
+      if (fullscreenBtn) fullscreenBtn.onclick = () => toggleFullscreen();
+      updateFullscreenUi();
+
       document.querySelectorAll('[data-nav]').forEach(btn => {
         btn.onclick = () => {
           if (btn.dataset.nav === 'dashboard') {
-            view = { screen: 'dashboard', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+            view = createBaseView({ screen: 'dashboard', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
             render();
             return;
           }
           if (btn.dataset.nav === 'calendar') {
-            view = { screen: 'calendar', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+            view = createBaseView({ screen: 'calendar', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
             render();
             return;
           }
           if (btn.dataset.nav === 'home') {
-            view = { screen: 'home', categoryId: null, taskId: null, showUpcomingDeadlines: view.showUpcomingDeadlines, showCompletedTasks: view.showCompletedTasks, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+            view = createBaseView({ screen: 'home', showUpcomingDeadlines: view.showUpcomingDeadlines, showCompletedTasks: view.showCompletedTasks, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
             render();
             return;
           }
           if (btn.dataset.nav === 'categories') {
-            view = { screen: 'categories', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+            view = createBaseView({ screen: 'categories', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
             render();
             return;
           }
           if (btn.dataset.nav === 'all_tasks') {
-            view = { screen: 'all_tasks', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+            view = createBaseView({ screen: 'all_tasks', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
             render();
             return;
           }
@@ -1731,7 +1781,7 @@
 
       document.querySelectorAll('[data-open-category]').forEach(card => {
         card.onclick = () => {
-          view = { screen: 'category', categoryId: Number(card.dataset.openCategory), taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, calendarMonthOffset: view.calendarMonthOffset || 0 };
+          view = createBaseView({ screen: 'category', categoryId: Number(card.dataset.openCategory), homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
           render();
         };
       });
@@ -1757,6 +1807,13 @@
       document.querySelectorAll('[data-toggle-home-priority-filter]').forEach(btn => {
         btn.onclick = () => {
           view.homePriorityFilter = view.homePriorityFilter === 'all' ? 'critical' : 'all';
+          render();
+        };
+      });
+
+      document.querySelectorAll('[data-filter-all-tasks-category]').forEach(select => {
+        select.onchange = () => {
+          view.allTasksCategoryFilter = select.value || 'all';
           render();
         };
       });
@@ -2017,6 +2074,10 @@
       });
     }
 
+    document.addEventListener('fullscreenchange', () => {
+      updateFullscreenUi();
+    });
+
     document.addEventListener('keydown', (event) => {
       if (shouldIgnoreKeyboardNavigation(event)) return;
 
@@ -2133,7 +2194,7 @@ XLSX.writeFile(workbook, `suivi_taches_${formattedDate}.xlsx`);
       }
 
       data = migrateData(next);
-      view = { screen: 'dashboard', categoryId: null, taskId: null, showUpcomingDeadlines: false, showCompletedTasks: false, homePriorityFilter: 'critical', allTasksAccountableFilter: 'all', calendarMonthOffset: 0 };
+      view = createBaseView();
       saveData('Importé');
       render();
     }
