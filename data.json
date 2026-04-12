@@ -119,6 +119,239 @@
           "deadlineUi": {
             "editIndex": -1
           }
+        },
+        {
+          "id": "amenagements-divers-regie-steaming-renovation",
+          "category": "Aménagements divers",
+          "name": "Régie steaming rénovation",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "étude des besoins",
+              "date": "2026-05-01",
+              "status": "À étudier",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "lien avec l'espace croupiers",
+              "date": "2026-05-01",
+              "status": "À étudier",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            },
+            {
+              "label": "débuter les travaux",
+              "date": "2026-07-01",
+              "status": "À faire",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "amenagements-divers-salles-de-bain-privilege",
+          "category": "Aménagements divers",
+          "name": "Salles de bain Privilège",
+          "accountable": "DE",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "amenagements-divers-salle-de-comptee",
+          "category": "Aménagements divers",
+          "name": "Salle de comptée",
+          "accountable": "AC",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "amenagements-divers-decorations-ete-hivers",
+          "category": "Aménagements divers",
+          "name": "Décorations été / hivers",
+          "accountable": "JS",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
         }
       ]
     },
@@ -452,11 +685,11 @@
       ]
     },
     {
-      "name": "Entretien Matériel",
+      "name": "Matériel",
       "tasks": [
         {
-          "id": "entretien-materiel-urinoirs",
-          "category": "Entretien Matériel",
+          "id": "materiel-urinoirs",
+          "category": "Matériel",
           "name": "Urinoirs",
           "accountable": "HT",
           "sections": {
@@ -520,8 +753,8 @@
           }
         },
         {
-          "id": "entretien-materiel-serrures-sans-code",
-          "category": "Entretien Matériel",
+          "id": "materiel-serrures-sans-code",
+          "category": "Matériel",
           "name": "Serrures sans code",
           "accountable": "DE",
           "sections": {
@@ -574,8 +807,8 @@
           }
         },
         {
-          "id": "entretien-materiel-serrures-avec-code",
-          "category": "Entretien Matériel",
+          "id": "materiel-serrures-avec-code",
+          "category": "Matériel",
           "name": "Serrures avec code",
           "accountable": "HT",
           "sections": {
@@ -637,9 +870,9 @@
           }
         },
         {
-          "id": "entretien-materiel-proprete-moquettes",
-          "category": "Entretien Matériel",
-          "name": "Propreté Moquettes",
+          "id": "materiel-moquettes",
+          "category": "Matériel",
+          "name": "Moquettes",
           "accountable": "XX",
           "sections": {
             "prestataire": {
@@ -693,9 +926,9 @@
           }
         },
         {
-          "id": "entretien-materiel-proprete-matelas",
-          "category": "Entretien Matériel",
-          "name": "Propreté Matelas",
+          "id": "materiel-matelas",
+          "category": "Matériel",
+          "name": "Matelas",
           "accountable": "DE",
           "sections": {
             "prestataire": {
@@ -756,9 +989,9 @@
           }
         },
         {
-          "id": "entretien-materiel-proprete-murs-peintures",
-          "category": "Entretien Matériel",
-          "name": "Propreté Murs (peintures)",
+          "id": "materiel-murs-peintures",
+          "category": "Matériel",
+          "name": "Murs (peintures)",
           "accountable": "DE",
           "sections": {
             "prestataire": {
@@ -821,8 +1054,8 @@
           }
         },
         {
-          "id": "entretien-materiel-coffres-piles",
-          "category": "Entretien Matériel",
+          "id": "materiel-coffres-piles",
+          "category": "Matériel",
           "name": "Coffres piles",
           "accountable": "DE",
           "sections": {
@@ -886,8 +1119,8 @@
           }
         },
         {
-          "id": "entretien-materiel-tablettes-lavabo",
-          "category": "Entretien Matériel",
+          "id": "materiel-tablettes-lavabo",
+          "category": "Matériel",
           "name": "Tablettes lavabo",
           "accountable": "DE",
           "sections": {
@@ -955,8 +1188,8 @@
           }
         },
         {
-          "id": "entretien-materiel-coffres-autocollants",
-          "category": "Entretien Matériel",
+          "id": "materiel-coffres-autocollants",
+          "category": "Matériel",
           "name": "Coffres autocollants",
           "accountable": "DE",
           "sections": {
@@ -1026,8 +1259,8 @@
           }
         },
         {
-          "id": "entretien-materiel-pommeau-des-douches",
-          "category": "Entretien Matériel",
+          "id": "materiel-pommeau-des-douches",
+          "category": "Matériel",
           "name": "Pommeau des douches",
           "accountable": "DE",
           "sections": {
@@ -1095,8 +1328,8 @@
           }
         },
         {
-          "id": "entretien-materiel-materiel-mis-a-disposition-des-clients",
-          "category": "Entretien Matériel",
+          "id": "materiel-materiel-mis-a-disposition-des-clients",
+          "category": "Matériel",
           "name": "Matériel mis à disposition des clients",
           "accountable": "DE",
           "sections": {
@@ -1158,8 +1391,8 @@
           }
         },
         {
-          "id": "entretien-materiel-televiseurs-encadrements",
-          "category": "Entretien Matériel",
+          "id": "materiel-televiseurs-encadrements",
+          "category": "Matériel",
           "name": "Téléviseurs encadrements",
           "accountable": "DE",
           "sections": {
@@ -1227,8 +1460,8 @@
           }
         },
         {
-          "id": "entretien-materiel-televiseurs-chromecast",
-          "category": "Entretien Matériel",
+          "id": "materiel-televiseurs-chromecast",
+          "category": "Matériel",
           "name": "Téléviseurs chromecast",
           "accountable": "DE",
           "sections": {
@@ -1281,8 +1514,8 @@
           }
         },
         {
-          "id": "entretien-materiel-ecrans-des-salles",
-          "category": "Entretien Matériel",
+          "id": "materiel-ecrans-des-salles",
+          "category": "Matériel",
           "name": "Écrans des salles",
           "accountable": "DE",
           "sections": {
@@ -1347,8 +1580,8 @@
           }
         },
         {
-          "id": "entretien-materiel-portes-casino",
-          "category": "Entretien Matériel",
+          "id": "materiel-portes-casino",
+          "category": "Matériel",
           "name": "Portes casino",
           "accountable": "HT",
           "sections": {
@@ -1408,8 +1641,8 @@
           }
         },
         {
-          "id": "entretien-materiel-portillons-casino",
-          "category": "Entretien Matériel",
+          "id": "materiel-portillons-casino",
+          "category": "Matériel",
           "name": "Portillons casino",
           "accountable": "HT",
           "sections": {
@@ -1786,6 +2019,58 @@
           "deadlineUi": {
             "editIndex": -1
           }
+        },
+        {
+          "id": "nettoyage-entretien-des-abords-exterieurs",
+          "category": "Nettoyage",
+          "name": "Entretien des abords extérieurs",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
         }
       ]
     },
@@ -1911,7 +2196,8 @@
               "input": false
             },
             "deadlines": {
-              "open": false
+              "open": false,
+              "input": false
             }
           },
           "deadlines": [
@@ -1930,96 +2216,6 @@
               "priority": 1,
               "notes": "cf. Hugues",
               "notesOpen": true
-            },
-            {
-              "label": "test",
-              "date": "2026-04-06",
-              "status": "À étudier",
-              "priority": 3,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": 2
-          }
-        }
-      ]
-    },
-    {
-      "name": "Régie streaming",
-      "tasks": [
-        {
-          "id": "regie-streaming-regie-renovation",
-          "category": "Régie streaming",
-          "name": "Régie rénovation",
-          "accountable": "HT",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "étude des besoins",
-              "date": "2026-05-01",
-              "status": "À étudier",
-              "priority": 3,
-              "notes": "",
-              "notesOpen": false
-            },
-            {
-              "label": "lien avec l'espace croupiers",
-              "date": "2026-05-01",
-              "status": "À étudier",
-              "priority": 2,
-              "notes": "",
-              "notesOpen": false
-            },
-            {
-              "label": "débuter les travaux",
-              "date": "2026-07-01",
-              "status": "À faire",
-              "priority": 3,
-              "notes": "",
-              "notesOpen": false
             }
           ],
           "deadlineUi": {
@@ -2027,10 +2223,10 @@
           }
         },
         {
-          "id": "regie-streaming-cloisons",
-          "category": "Régie streaming",
-          "name": "Cloisons",
-          "accountable": "HT",
+          "id": "prevention-reamenagement-des-reserves",
+          "category": "Prévention",
+          "name": "Réaménagement des réserves",
+          "accountable": "CVK",
           "sections": {
             "prestataire": {
               "notes": []
@@ -2071,6 +2267,104 @@
             },
             "deadlines": {
               "open": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "prevention-plan-interne-d-urgence",
+          "category": "Prévention",
+          "name": "Plan Interne d'Urgence",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "prevention-exercice-incendie",
+          "category": "Prévention",
+          "name": "Exercice Incendie",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
             }
           },
           "deadlines": [],
@@ -2164,6 +2458,115 @@
               "notesOpen": false
             }
           ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Appolonia",
+      "tasks": [
+        {
+          "id": "appolonia-bugs-demeter",
+          "category": "Appolonia",
+          "name": "Bugs Demeter",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "appolonia-tablettes-pre-inscription",
+          "category": "Appolonia",
+          "name": "Tablettes pré-inscription",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [],
           "deadlineUi": {
             "editIndex": -1
           }
