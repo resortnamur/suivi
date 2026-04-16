@@ -1161,7 +1161,7 @@
               `).join('')}
             </select>
             <select class="filter-select" data-filter-all-tasks-accountable="1">
-              <option value="all" ${selectedAccountable === 'all' ? 'selected' : ''}>Tous les accountable</option>
+              <option value="all" ${selectedAccountable === 'all' ? 'selected' : ''}>Tous les demandeurs</option>
               ${accountableOptions.map(accountable => `
                 <option value="${escapeHtml(accountable)}" ${selectedAccountable === accountable ? 'selected' : ''}>${escapeHtml(accountable)}</option>
               `).join('')}
@@ -2107,39 +2107,167 @@
       }
     });
 
+    function getTaskDeadline(task) {
+      if (!task || !Array.isArray(task.deadlines) || !task.deadlines.length) return null;
+      return task.deadlines[0] || null;
+    }
+
+    function formatExcelDisplayDate(dateString) {
+      const dateValue = toDateValue(dateString);
+      if (!dateValue) return String(dateString || '').trim();
+      return new Intl.DateTimeFormat('fr-BE', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+      }).format(dateValue);
+    }
+
+    function formatExcelPriority(priority) {
+      const value = getDeadlinePriorityValue(priority);
+      return value ? '*'.repeat(value) : '';
+    }
+
+    function parseExcelSerialDate(value, date1904 = false) {
+      const serial = Number(value);
+      if (!Number.isFinite(serial)) return '';
+      const utcDays = Math.floor(serial - (date1904 ? 0 : 1));
+      const utcValue = utcDays * 86400;
+      const dateInfo = new Date(utcValue * 1000);
+      const fractionalDay = serial - Math.floor(serial) + 0.0000001;
+      let totalSeconds = Math.floor(86400 * fractionalDay);
+      const seconds = totalSeconds % 60;
+      totalSeconds = Math.floor(totalSeconds / 60);
+      const minutes = totalSeconds % 60;
+      const hours = Math.floor(totalSeconds / 60) % 24;
+      let year = dateInfo.getUTCFullYear();
+      let month = dateInfo.getUTCMonth();
+      let day = dateInfo.getUTCDate();
+      if (date1904) day += 1;
+      const normalized = new Date(year, month, day, hours, minutes, seconds);
+      return `${normalized.getFullYear()}-${String(normalized.getMonth() + 1).padStart(2, '0')}-${String(normalized.getDate()).padStart(2, '0')}`;
+    }
+
+    function normalizeImportedExcelDate(rawValue, workbook) {
+      if (rawValue === null || rawValue === undefined || rawValue === '') return '';
+
+      if (rawValue instanceof Date && !Number.isNaN(rawValue.getTime())) {
+        return `${rawValue.getFullYear()}-${String(rawValue.getMonth() + 1).padStart(2, '0')}-${String(rawValue.getDate()).padStart(2, '0')}`;
+      }
+
+      if (typeof rawValue === 'number') {
+        return parseExcelSerialDate(rawValue, !!(workbook && workbook.Workbook && workbook.Workbook.WBProps && workbook.Workbook.WBProps.date1904));
+      }
+
+      const raw = String(rawValue).trim();
+      if (!raw) return '';
+
+      if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
+
+      let match = raw.match(/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4})$/);
+      if (match) {
+        const [, day, month, year] = match;
+        return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      }
+
+      match = raw.match(/^(\d{4})[\/\-.](\d{1,2})[\/\-.](\d{1,2})$/);
+      if (match) {
+        const [, year, month, day] = match;
+        return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      }
+
+      if (/^\d+(?:\.\d+)?$/.test(raw)) {
+        return parseExcelSerialDate(Number(raw), !!(workbook && workbook.Workbook && workbook.Workbook.WBProps && workbook.Workbook.WBProps.date1904));
+      }
+
+      return raw;
+    }
+
     function exportExcel() {
       if (!window.XLSX) {
         alert('Librairie Excel indisponible.');
         return;
       }
+
+      const headers = [
+        'Catégorie',
+        'Tâche',
+        'Échéance',
+        'Demandeur',
+        'Priorité',
+        'Statut',
+        'Notes',
+        'Prestataire / fournisseur',
+        'Produit / matériel',
+        'Procédure',
+        'Gestion du stock',
+        'En cas d’urgence'
+      ];
+
       const rows = [];
       data.categories.forEach(category => {
         category.tasks.forEach(task => {
-          const row = {
-            'Catégorie': category.name,
-            'Tâche': task.name,
-            'Accountable': task.accountable || ''
-          };
-          PARAM_DEFS.forEach(({ key, label }) => {
-            row[label] = (task.sections[key].notes || []).join('\n');
+          const deadline = getTaskDeadline(task) || {};
+          rows.push({
+            'Catégorie': category.name || '',
+            'Tâche': task.name || '',
+            'Échéance': formatExcelDisplayDate(deadline.date || ''),
+            'Demandeur': task.accountable || '',
+            'Priorité': formatExcelPriority(deadline.priority),
+            'Statut': deadline.status || '',
+            'Notes': deadline.notes || '',
+            'Prestataire / fournisseur': (task.sections.prestataire.notes || []).join('\n'),
+            'Produit / matériel': (task.sections.produit.notes || []).join('\n'),
+            'Procédure': (task.sections.procedure.notes || []).join('\n'),
+            'Gestion du stock': (task.sections.stock.notes || []).join('\n'),
+            'En cas d’urgence': (task.sections.urgence.notes || []).join('\n')
           });
-          row['État d’avancement / deadline'] = (task.deadlines || []).map(d =>
-            [d.label || '', getDeadlinePriorityValue(d.priority), d.date || '', d.status || '', d.notes || ''].join(' | ')
-          ).join('\n');
-          rows.push(row);
         });
       });
+
       const workbook = XLSX.utils.book_new();
-      const sheet = XLSX.utils.json_to_sheet(rows);
+      const sheet = XLSX.utils.json_to_sheet(rows, { header: headers });
+      sheet['!cols'] = [
+        { wch: 19 },
+        { wch: 40 },
+        { wch: 15 },
+        { wch: 15 },
+        { wch: 12 },
+        { wch: 10 },
+        { wch: 35 },
+        { wch: 35 },
+        { wch: 35 },
+        { wch: 35 },
+        { wch: 35 },
+        { wch: 35 }
+      ];
+
+      if (sheet['!ref']) {
+        const range = XLSX.utils.decode_range(sheet['!ref']);
+        for (let row = range.s.r; row <= range.e.r; row += 1) {
+          [2, 3, 4, 5].forEach(col => {
+            const cellRef = XLSX.utils.encode_cell({ r: row, c: col });
+            if (!sheet[cellRef]) return;
+            sheet[cellRef].s = {
+              ...(sheet[cellRef].s || {}),
+              alignment: {
+                horizontal: 'center',
+                vertical: 'center',
+                wrapText: true
+              }
+            };
+          });
+        }
+      }
+
       XLSX.utils.book_append_sheet(workbook, sheet, 'Suivi');
       const today = new Date();
-const formattedDate = new Intl.DateTimeFormat('fr-BE', {
-  day: '2-digit',
-  month: '2-digit',
-  year: 'numeric'
-}).format(today).replace(/\//g, '-');
+      const formattedDate = new Intl.DateTimeFormat('fr-BE', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+      }).format(today).replace(/\//g, '-');
 
-XLSX.writeFile(workbook, `suivi_taches_${formattedDate}.xlsx`);
+      XLSX.writeFile(workbook, `suivi_taches_${formattedDate}.xlsx`, { cellStyles: true });
     }
 
     async function importExcel(file) {
@@ -2148,9 +2276,9 @@ XLSX.writeFile(workbook, `suivi_taches_${formattedDate}.xlsx`);
         return;
       }
       const buffer = await file.arrayBuffer();
-      const workbook = XLSX.read(buffer, { type: 'array' });
+      const workbook = XLSX.read(buffer, { type: 'array', cellDates: true, raw: false });
       const sheet = workbook.Sheets[workbook.SheetNames[0]];
-      const rows = XLSX.utils.sheet_to_json(sheet, { defval: '' });
+      const rows = XLSX.utils.sheet_to_json(sheet, { defval: '', raw: false });
       const next = { categories: [] };
 
       rows.forEach(row => {
@@ -2165,26 +2293,23 @@ XLSX.writeFile(workbook, `suivi_taches_${formattedDate}.xlsx`);
         }
 
         const task = createTask(categoryName, taskName);
-        task.accountable = String(row['Accountable'] || '').trim().toUpperCase().slice(0, 8);
+        task.accountable = String(row['Demandeur'] || row['Accountable'] || '').trim().toUpperCase().slice(0, 8);
         PARAM_DEFS.forEach(({ key, label }) => {
           task.sections[key].notes = String(row[label] || '')
             .split(/\r?\n+/)
             .map(v => v.trim())
             .filter(Boolean);
         });
-        task.deadlines = String(row['État d’avancement / deadline'] || '')
-          .split(/\r?\n+/)
-          .map(line => line.trim())
-          .filter(Boolean)
-          .map(line => {
-            const parts = line.split('|').map(v => v.trim());
-            if (parts.length >= 5) {
-              const [label, priority, date, status, ...rest] = parts;
-              return { label: label || '', priority: getDeadlinePriorityValue(priority), date: date || '', status: status || '', notes: rest.join(' | ') || '' };
-            }
-            const [label, date, status, ...rest] = parts;
-            return { label: label || '', priority: 0, date: date || '', status: status || '', notes: rest.join(' | ') || '' };
-          });
+
+        task.deadlines = [{
+          label: '',
+          date: normalizeImportedExcelDate(row['Échéance'] || '', workbook),
+          status: String(row['Statut'] || '').trim(),
+          priority: getDeadlinePriorityValue(row['Priorité']),
+          notes: String(row['Notes'] || row['Notes échéance'] || '').trim(),
+          notesOpen: !!String(row['Notes'] || row['Notes échéance'] || '').trim()
+        }];
+
         category.tasks.push(task);
       });
 
