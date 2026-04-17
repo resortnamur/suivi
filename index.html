@@ -76,7 +76,7 @@
     .alert-section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
     .alert-section-title{margin:0;font-size:16px;font-weight:800;letter-spacing:-.01em}
     .alert-list{display:grid;gap:10px}
-    .alert-item{display:grid;grid-template-columns:1.15fr .8fr .6fr .75fr 1.2fr;gap:10px;align-items:start;padding:12px 14px;border:1px solid #e7edf5;border-radius:12px;background:#fff}
+    .alert-item{display:grid;grid-template-columns:1.35fr .7fr .8fr 1.35fr;gap:10px;align-items:start;padding:12px 14px;border:1px solid #e7edf5;border-radius:12px;background:#fff}
     .alert-item.alert-soon{border-color:#f2c27c;background:#fff5e8}
     .alert-item.alert-overdue{border-color:#e59d98;background:#fff0ef}
     .alert-head{font-size:12px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;background:#f7f9fc}
@@ -258,7 +258,7 @@
     .deadline-summary-grid{display:grid;gap:8px}
     .deadline-summary-item{
       display:grid;
-      grid-template-columns:minmax(120px,1.2fr) minmax(90px,.7fr) minmax(110px,.9fr) minmax(110px,.9fr) minmax(180px,1.2fr);
+      grid-template-columns:minmax(90px,.7fr) minmax(110px,.9fr) minmax(110px,.9fr) minmax(220px,1.4fr);
       gap:10px;
       padding:10px 12px;
       border:1px solid #e7edf5;
@@ -345,7 +345,7 @@
 
   <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
   <script>
-    const STORAGE_KEY = 'suivi_taches_hotel_v11_accountable_reset';
+    const STORAGE_KEY = 'suivi_taches_hotel_v12_single_deadline';
     const LOCAL_DATA_KEY = 'suivi_taches_shared_working_copy';
     const LAST_UPDATE_KEY = 'suivi_taches_last_local_update';
     const ADMIN_SESSION_KEY = 'suivi_taches_admin_mode';
@@ -367,7 +367,7 @@
         accountable: '',
         sections: Object.fromEntries(PARAM_DEFS.map(p => [p.key, { notes: [] }])),
         ui: Object.fromEntries(PARAM_DEFS.map(p => [p.key, { open: false, input: false }])),
-        deadlines: [],
+        deadlines: [{ label: '', date: '', status: '', priority: 3, notes: '', notesOpen: false }],
         deadlineUi: { editIndex: -1 }
       };
     }
@@ -390,6 +390,7 @@
         homePriorityFilter: 'critical',
         allTasksAccountableFilter: 'all',
         allTasksCategoryFilter: 'all',
+        allTasksSort: 'alpha',
         calendarMonthOffset: 0,
         ...overrides
       };
@@ -469,7 +470,7 @@
       const t = { ...task };
       t.category = t.category || categoryName || '';
       t.id = t.id || slugify((t.category || '') + '-' + (t.name || 'tache'));
-      t.accountable = String(t.accountable || '').trim().toUpperCase().slice(0, 8);
+      t.accountable = normalizeAccountableValue(t.accountable);
       const sections = {};
       PARAM_DEFS.forEach(({ key }) => {
         const existing = t.sections && t.sections[key];
@@ -492,7 +493,7 @@
       }, {});
       if (!t.ui.deadlines || typeof t.ui.deadlines !== 'object') t.ui.deadlines = { open: false };
       else t.ui.deadlines = { open: !!t.ui.deadlines.open };
-      t.deadlines = Array.isArray(t.deadlines) ? t.deadlines.map(d => ({
+      const rawDeadlines = Array.isArray(t.deadlines) ? t.deadlines.map(d => ({
         label: d.label || '',
         date: d.date || '',
         status: d.status || '',
@@ -500,10 +501,10 @@
         notes: d.notes || '',
         notesOpen: !!(d.notes && String(d.notes).trim())
       })) : [];
+      t.deadlines = rawDeadlines.length ? [rawDeadlines[0]] : [{ label: '', date: '', status: '', priority: 3, notes: '', notesOpen: false }];
       t.deadlineUi = {
-        editIndex: t.deadlineUi && Number.isInteger(t.deadlineUi.editIndex) ? t.deadlineUi.editIndex : -1
+        editIndex: 0
       };
-      if (t.deadlineUi.editIndex >= t.deadlines.length) t.deadlineUi.editIndex = -1;
       ['prestataire','produit','procedure','stock','urgence','commentaires'].forEach(k => delete t[k]);
       return t;
     }
@@ -544,27 +545,9 @@
       currentDataSource = 'local';
     }
 
-    function setLastLocalUpdate(timestamp = new Date().toISOString()) {
-      localStorage.setItem(LAST_UPDATE_KEY, timestamp);
-    }
-
-    function getLastLocalUpdate() {
-      const raw = localStorage.getItem(LAST_UPDATE_KEY);
-      if (!raw) return '';
-      const dateValue = new Date(raw);
-      if (Number.isNaN(dateValue.getTime())) return '';
-      return new Intl.DateTimeFormat('fr-BE', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit'
-      }).format(dateValue);
-    }
-
     function saveData(message = 'Enregistré') {
       persistLocalWorkingCopy();
-      setLastLocalUpdate();
+      localStorage.setItem(LAST_UPDATE_KEY, new Date().toISOString());
       const el = document.getElementById('saveIndicator');
       if (el) {
         el.textContent = message;
@@ -605,6 +588,24 @@
       };
     }
 
+
+    function formatLastUpdateDisplay(value) {
+      if (!value) return 'Aucune mise à jour locale';
+      const dateValue = new Date(value);
+      if (Number.isNaN(dateValue.getTime())) return 'Aucune mise à jour locale';
+      return new Intl.DateTimeFormat('fr-BE', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      }).format(dateValue);
+    }
+
+    function getLastLocalUpdate() {
+      return localStorage.getItem(LAST_UPDATE_KEY) || '';
+    }
+
     function downloadSharedJsonFile() {
       const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json;charset=utf-8' });
       const url = URL.createObjectURL(blob);
@@ -640,6 +641,18 @@
       const category = getCategory(view.categoryId);
       if (!category) return null;
       return category.tasks.find(t => t.id === view.taskId) || null;
+    }
+
+    function getTaskDeadline(task) {
+      if (!task) return null;
+      if (!Array.isArray(task.deadlines) || !task.deadlines.length) {
+        task.deadlines = [{ label: '', date: '', status: '', priority: 3, notes: '', notesOpen: false }];
+      }
+      return task.deadlines[0] || null;
+    }
+
+    function getTaskDeadlineState(task) {
+      return getDeadlineVisualState(getTaskDeadline(task));
     }
 
 
@@ -730,8 +743,12 @@
     }
 
 
+    function normalizeAccountableValue(value) {
+      return String(value || '').trim().replace(/\s+/g, ' ');
+    }
+
     function formatAccountable(accountable) {
-      const value = String(accountable || '').trim().toUpperCase();
+      const value = normalizeAccountableValue(accountable);
       return value ? `<span class="accountable-badge">${escapeHtml(value)}</span>` : '';
     }
 
@@ -835,6 +852,7 @@
               categoryIndex,
               taskId: task.id,
               taskName: task.name || '—',
+              accountable: task.accountable || '',
               deadlineLabel: deadline.label || '—',
               priority,
               date: deadline.date,
@@ -919,7 +937,7 @@
             <div class="calendar-head">
               <div class="calendar-title-wrap">
                 <h2 class="calendar-title">Calendrier des échéances</h2>
-                <p class="calendar-subtitle">Vue mensuelle de toutes les échéances non terminées. Clic sur une échéance pour ouvrir la tâche, parce qu’apparemment cliquer sur des boîtes reste la base de l’informatique.</p>
+                <p class="calendar-subtitle">Vue mensuelle des échéances non terminées. Clic sur une échéance pour ouvrir la tâche.</p>
               </div>
               <div class="calendar-nav">
                 <button type="button" data-calendar-nav="prev">Mois précédent</button>
@@ -944,7 +962,7 @@
                       <div class="calendar-day-list">
                         ${dayItems.slice(0, 3).map(item => `
                           <button type="button" class="calendar-pill ${item.state === 'deadline-overdue' ? 'alert-overdue' : item.state === 'deadline-soon' ? 'alert-soon' : ''}" data-open-home-alert-task="${item.categoryIndex}" data-task-id="${escapeHtml(item.taskId)}" title="Ouvrir la tâche">
-                            ${escapeHtml(item.deadline.label || item.taskName || 'Échéance')}
+                            ${escapeHtml(item.taskName || 'Échéance')}
                           </button>
                         `).join('')}
                         ${dayItems.length > 3 ? `<div class="calendar-pill-more">+${dayItems.length - 3} autre${dayItems.length - 3 > 1 ? 's' : ''}</div>` : ''}
@@ -964,7 +982,7 @@
                 ${items.length ? items.map(item => `
                   <button class="calendar-agenda-item ${item.state === 'deadline-overdue' ? 'alert-overdue' : item.state === 'deadline-soon' ? 'alert-soon' : ''}" type="button" data-open-home-alert-task="${item.categoryIndex}" data-task-id="${escapeHtml(item.taskId)}" title="Ouvrir la tâche">
                     <div class="calendar-agenda-main">
-                      <div class="calendar-agenda-task">${escapeHtml(item.taskName || '—')} · ${escapeHtml(item.deadline.label || '—')}</div>
+                      <div class="calendar-agenda-task">${escapeHtml(item.taskName || '—')}</div>
                       <div class="calendar-agenda-meta">${escapeHtml(item.accountable || '—')} · ${escapeHtml(formatDisplayDate(item.deadline.date))}</div>
                     </div>
                     <span class="executive-chip">${escapeHtml(formatDeadlinePriority(item.deadline.priority))}</span>
@@ -983,6 +1001,7 @@
       const summary = getExecutiveSummary();
       const nextDeadlines = summary.nextDeadlines.slice(0, 6);
       const topCategories = summary.categories.slice(0, 6);
+      const lastLocalUpdate = formatLastUpdateDisplay(getLastLocalUpdate());
       return `
         <div class="view-stack">
           <section class="executive-panel">
@@ -1014,7 +1033,8 @@
               </article>
               <article class="executive-stat">
                 <div class="executive-stat-label">Dernière mise à jour</div>
-                <div class="executive-stat-value" style="font-size:22px;line-height:1.15">${escapeHtml(getLastLocalUpdate() || '—')}</div>
+                <div class="executive-stat-value" style="font-size:22px;line-height:1.2;letter-spacing:-.02em;">${escapeHtml(lastLocalUpdate)}</div>
+                <div class="executive-stat-meta"></div>
               </article>
               <article class="executive-stat">
                 <div class="executive-stat-label">En retard</div>
@@ -1030,12 +1050,12 @@
 
             <div class="executive-columns">
               <section class="executive-card">
-                <h2>Prochaines étapes datées</h2>
+                <h2>Prochaines échéances</h2>
                 <div class="executive-list">
                   ${nextDeadlines.length ? nextDeadlines.map(item => `
                     <button class="executive-row ${item.state === 'deadline-overdue' ? 'alert-overdue' : item.state === 'deadline-soon' ? 'alert-soon' : ''}" type="button" data-open-home-alert-task="${item.categoryIndex}" data-task-id="${escapeHtml(item.taskId)}" title="Ouvrir la tâche">
                       <div class="executive-row-main">
-                        <div class="executive-row-title">${escapeHtml(item.taskName)} · ${escapeHtml(item.deadlineLabel)}</div>
+                        <div class="executive-row-title">${escapeHtml(item.taskName)}${formatAccountable(item.accountable)}</div>
                         <div class="executive-row-meta">${escapeHtml(formatDisplayDate(item.date))}</div>
                       </div>
                       <span class="executive-chip">${escapeHtml(formatDeadlinePriority(item.priority))}</span>
@@ -1110,11 +1130,14 @@
             ${isAdminMode ? '<button data-rename-category="1">Renommer la catégorie</button><button data-add-task="1">Ajouter une tâche</button>' : ''}
           </div>
           <div class="grid">
-            ${tasks.length ? tasks.map(task => `
+            ${tasks.length ? tasks.map(task => {
+              const deadline = getTaskDeadline(task);
+              return `
               <article class="card" data-open-task="${escapeHtml(task.id)}">
                 <h2 class="card-title">${escapeHtml(task.name)}${formatAccountable(task.accountable)}</h2>
+                <div class="card-meta">${escapeHtml(formatDisplayDate(deadline && deadline.date))}</div>
               </article>
-            `).join('') : '<div class="empty">Aucune tâche dans cette catégorie</div>'}
+            `;}).join('') : '<div class="empty">Aucune tâche dans cette catégorie</div>'}
           </div>
         </div>
       `;
@@ -1141,33 +1164,59 @@
     }
 
     function getAllTaskAccountables() {
-      return Array.from(new Set(
-        data.categories.flatMap(category => (category.tasks || []).map(task => String(task.accountable || '').trim().toUpperCase()).filter(Boolean))
-      )).sort((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
+      const seen = new Map();
+      data.categories.forEach(category => {
+        (category.tasks || []).forEach(task => {
+          const value = normalizeAccountableValue(task.accountable);
+          if (!value) return;
+          const key = value.toLocaleLowerCase('fr-BE');
+          if (!seen.has(key)) seen.set(key, value);
+        });
+      });
+      return Array.from(seen.values()).sort((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
     }
 
-    function getAllTasksAlphabetical() {
-      return data.categories.flatMap((category, categoryIndex) =>
+    function getAllTasksList(sortMode = 'alpha') {
+      const items = data.categories.flatMap((category, categoryIndex) =>
         (category.tasks || []).map(task => ({
           categoryIndex,
           categoryName: category.name || '',
           taskId: task.id,
           taskName: task.name || '',
-          accountable: task.accountable || ''
+          accountable: normalizeAccountableValue(task.accountable),
+          deadlineDate: (getTaskDeadline(task) || {}).date || ''
         }))
-      ).sort((a, b) => a.taskName.localeCompare(b.taskName, 'fr', { sensitivity: 'base' }));
+      );
+
+      if (sortMode === 'date') {
+        return items.sort((a, b) => {
+          const dateA = toDateValue(a.deadlineDate);
+          const dateB = toDateValue(b.deadlineDate);
+          if (dateA && dateB) return dateA - dateB || a.taskName.localeCompare(b.taskName, 'fr', { sensitivity: 'base' });
+          if (dateA) return -1;
+          if (dateB) return 1;
+          return a.taskName.localeCompare(b.taskName, 'fr', { sensitivity: 'base' });
+        });
+      }
+
+      return items.sort((a, b) => a.taskName.localeCompare(b.taskName, 'fr', { sensitivity: 'base' }));
+    }
+
+    function getAllTasksAlphabetical() {
+      return getAllTasksList('alpha');
     }
 
     function renderAllTasks() {
       const accountableOptions = getAllTaskAccountables();
       const selectedAccountable = view.allTasksAccountableFilter || 'all';
       const selectedCategory = view.allTasksCategoryFilter || 'all';
+      const selectedSort = view.allTasksSort || 'alpha';
       const categoryOptions = data.categories
         .map(category => String(category.name || '').trim())
         .filter(Boolean)
         .sort((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
-      const tasks = getAllTasksAlphabetical().filter(item => {
-        const accountableMatch = selectedAccountable === 'all' || String(item.accountable || '').trim().toUpperCase() === selectedAccountable;
+      const tasks = getAllTasksList(selectedSort).filter(item => {
+        const accountableMatch = selectedAccountable === 'all' || normalizeAccountableValue(item.accountable).localeCompare(selectedAccountable, 'fr', { sensitivity: 'base' }) === 0;
         const categoryMatch = selectedCategory === 'all' || item.categoryName === selectedCategory;
         return accountableMatch && categoryMatch;
       });
@@ -1186,14 +1235,18 @@
                 <option value="${escapeHtml(accountable)}" ${selectedAccountable === accountable ? 'selected' : ''}>${escapeHtml(accountable)}</option>
               `).join('')}
             </select>
+            <select class="filter-select" data-sort-all-tasks="1">
+              <option value="alpha" ${selectedSort === 'alpha' ? 'selected' : ''}>Tri alphabétique</option>
+              <option value="date" ${selectedSort === 'date' ? 'selected' : ''}>Tri par date d'échéance</option>
+            </select>
           </div>
           <div class="grid">
             ${tasks.length ? tasks.map(item => `
               <article class="card" data-open-task-global="${item.categoryIndex}" data-task-id="${escapeHtml(item.taskId)}">
                 <h2 class="card-title">${escapeHtml(item.taskName)}${formatAccountable(item.accountable)}</h2>
-                <div class="card-meta">${escapeHtml(item.categoryName)}</div>
+                <div class="card-meta">${escapeHtml(item.categoryName)} · ${escapeHtml(formatDisplayDate(item.deadlineDate || ''))}</div>
               </article>
-            `).join('') : '<div class="empty">Aucune tâche pour cet accountable</div>'}
+            `).join('') : '<div class="empty">Aucune tâche pour ce demandeur</div>'}
           </div>
         </div>
       `;
@@ -1218,8 +1271,8 @@
             <div class="task-overview">
               <section class="deadline-block deadline-block-priority">
                 <div class="deadline-top">
-                  <h3 class="deadline-title">État d’avancement / deadlines</h3>
-                  ${isAdminMode ? '<button data-add-deadline="1">Ajouter une étape</button>' : ''}
+                  <h3 class="deadline-title">Échéance de la tâche</h3>
+                  
                 </div>
                 <div class="deadline-summary">
                   ${renderDeadlineSummary(task)}
@@ -1306,6 +1359,15 @@
     }
 
     function getDeadlinePriorityValue(priority) {
+      if (priority === null || priority === undefined) return 0;
+
+      if (typeof priority === 'string') {
+        const raw = priority.trim();
+        if (!raw) return 0;
+        if (/^\*{1,3}$/.test(raw)) return raw.length;
+        if (/^★{1,3}$/.test(raw)) return raw.length;
+      }
+
       const value = Number(priority);
       if (value >= 3) return 3;
       if (value >= 2) return 2;
@@ -1435,7 +1497,6 @@
         <div class="alert-list">
           <div class="alert-item alert-head">
             <div>Tâche</div>
-            <div>Étape</div>
             <div>Priorité</div>
             <div>Date</div>
             <div>Notes</div>
@@ -1449,7 +1510,6 @@
               title="Ouvrir la tâche"
             >
               <div>${escapeHtml(taskName || '—')}${formatAccountable(accountable)}</div>
-              <div>${escapeHtml(deadline.label || '—')}</div>
               <div>${escapeHtml(formatDeadlinePriority(deadline.priority))}</div>
               <div>${escapeHtml(formatDisplayDate(deadline.date))}</div>
               <div class="alert-notes">${escapeHtml(deadline.notes || '—')}</div>
@@ -1465,7 +1525,6 @@
         <div class="alert-list">
           <div class="alert-item alert-head">
             <div>Tâche</div>
-            <div>Dernière étape</div>
             <div>Priorité</div>
             <div>Date</div>
             <div>Notes</div>
@@ -1479,7 +1538,6 @@
               title="Ouvrir la tâche"
             >
               <div>${escapeHtml(taskName || '—')}${formatAccountable(accountable)}</div>
-              <div>${escapeHtml(latestStep || '—')}</div>
               <div>${escapeHtml(formatDeadlinePriority(latestPriority))}</div>
               <div>${escapeHtml(formatDisplayDate(lastCompletedDateRaw))}</div>
               <div class="alert-notes">${escapeHtml(notes || '—')}</div>
@@ -1491,12 +1549,11 @@
 
     function renderHomeDeadlineReport() {
       const items = getHomeAlertDeadlines();
-      if (!items.length) return '<div class="empty">Aucune deadline proche ou dépassée</div>';
+      if (!items.length) return '<div class="empty">Aucune échéance proche ou dépassée</div>';
       return `
         <div class="alert-list">
           <div class="alert-item alert-head">
             <div>Tâche</div>
-            <div>Étape</div>
             <div>Priorité</div>
             <div>Date</div>
             <div>Notes</div>
@@ -1510,7 +1567,6 @@
               title="Ouvrir la tâche"
             >
               <div>${escapeHtml(taskName || '—')}${formatAccountable((data.categories[categoryIndex] || {}).tasks?.find(t => t.id === taskId)?.accountable)}</div>
-              <div>${escapeHtml(deadline.label || '—')}</div>
               <div>${escapeHtml(formatDeadlinePriority(deadline.priority))}</div>
               <div>${escapeHtml(formatDisplayDate(deadline.date))}</div>
               <div class="alert-notes">${escapeHtml(deadline.notes || '—')}</div>
@@ -1555,32 +1611,31 @@
     }
 
     function renderDeadlineSummary(task) {
-      if (!task.deadlines.length) return '<div class="empty">Aucune deadline</div>';
+      const deadline = getTaskDeadline(task);
+      const index = 0;
+      const state = getDeadlineVisualState(deadline);
+      if (!deadline) return '<div class="empty">Aucune échéance</div>';
       return `
         <div class="deadline-summary-grid">
           <div class="deadline-summary-item deadline-summary-head">
-            <div>Étape</div>
             <div>Priorité</div>
             <div>Date</div>
             <div>Statut</div>
             <div>Notes</div>
           </div>
-          ${getSortedDeadlines(task).map(({ deadline, index, state }) => `
-            <div>
-              <div class="deadline-summary-item deadline-summary-entry ${task.deadlineUi && task.deadlineUi.editIndex === index ? 'active' : ''} ${state}" ${isAdminMode ? `data-edit-deadline="${index}" role="button" tabindex="0"` : ''}>
-                <div>${escapeHtml(deadline.label || '—')}</div>
-                <div>${escapeHtml(formatDeadlinePriority(deadline.priority))}</div>
-                <div>${escapeHtml(formatDisplayDate(deadline.date))}</div>
-                <div>${escapeHtml(deadline.status || '—')}</div>
-                <div class="deadline-summary-notes">${escapeHtml(deadline.notes || '—')}</div>
-              </div>
-              ${isAdminMode && task.deadlineUi && task.deadlineUi.editIndex === index ? `
-                <div class="deadline-editor-row" data-deadline-editor-row="1">
-                  ${renderDeadlineEditor(task, index)}
-                </div>
-              ` : ''}
+          <div>
+            <div class="deadline-summary-item deadline-summary-entry ${task.deadlineUi && task.deadlineUi.editIndex === index ? 'active' : ''} ${state}" ${isAdminMode ? `data-edit-deadline="${index}" role="button" tabindex="0"` : ''}>
+              <div>${escapeHtml(formatDeadlinePriority(deadline.priority))}</div>
+              <div>${escapeHtml(formatDisplayDate(deadline.date))}</div>
+              <div>${escapeHtml(deadline.status || '—')}</div>
+              <div class="deadline-summary-notes">${escapeHtml(deadline.notes || '—')}</div>
             </div>
-          `).join('')}
+            ${isAdminMode ? `
+              <div class="deadline-editor-row" data-deadline-editor-row="1">
+                ${renderDeadlineEditor(task, index)}
+              </div>
+            ` : ''}
+          </div>
         </div>
       `;
     }
@@ -1592,8 +1647,7 @@
       return `
         <article class="deadline-card">
           <div class="deadline-fields">
-            <input type="text" placeholder="Étape" value="${escapeHtml(deadline.label || '')}" data-deadline-field="label" data-deadline-index="${index}" data-deadline-primary="1" />
-            <select data-deadline-field="priority" data-deadline-index="${index}">
+            <select data-deadline-field="priority" data-deadline-index="${index}" data-deadline-primary="1">
               ${[
                 { value: '0', label: 'Priorité' },
                 { value: '1', label: '★' },
@@ -1612,8 +1666,7 @@
           </div>
           ${notesVisible ? `<textarea placeholder="Notes" data-deadline-field="notes" data-deadline-index="${index}">${escapeHtml(deadline.notes || '')}</textarea>` : ''}
           <div class="deadline-actions">
-            ${isAdminMode ? `<button class=\"add-note-btn\" type=\"button\" title=\"Ajouter une note\" aria-label=\"Ajouter une note\" data-show-deadline-notes=\"${index}\">Ajouter une note</button>
-            <button class=\"delete-note\" type=\"button\" title=\"Supprimer\" aria-label=\"Supprimer\" data-delete-deadline=\"${index}\">&times;</button>` : ''}
+            ${isAdminMode ? `<button class=\"add-note-btn\" type=\"button\" title=\"Ajouter une note\" aria-label=\"Ajouter une note\" data-show-deadline-notes=\"${index}\">Ajouter une note</button>` : ''}
           </div>
         </article>
       `;
@@ -1622,11 +1675,11 @@
 
     function goBack() {
       if (view.screen === 'task') {
-        view = createBaseView({ screen: 'category', categoryId: view.categoryId, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+        view = createBaseView({ screen: 'category', categoryId: view.categoryId, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'category') {
-        view = createBaseView({ screen: 'categories', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+        view = createBaseView({ screen: 'categories', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'categories' || view.screen === 'all_tasks') {
-        view = createBaseView({ screen: 'dashboard', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+        view = createBaseView({ screen: 'dashboard', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else {
         return;
       }
@@ -1655,7 +1708,7 @@
         }
       });
       nextTask.deadlineUi = { editIndex: -1 };
-      view = createBaseView({ screen: 'task', categoryId: categoryIndex, taskId, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+      view = createBaseView({ screen: 'task', categoryId: categoryIndex, taskId, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
       render();
     }
 
@@ -1683,11 +1736,11 @@
 
     function goForwardPage() {
       if (view.screen === 'dashboard') {
-        view = createBaseView({ screen: 'home', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+        view = createBaseView({ screen: 'home', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'home') {
-        view = createBaseView({ screen: 'categories', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+        view = createBaseView({ screen: 'categories', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'categories') {
-        view = createBaseView({ screen: 'all_tasks', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+        view = createBaseView({ screen: 'all_tasks', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'all_tasks') {
         const first = getAllTasksAlphabetical()[0];
         if (!first) return;
@@ -1701,13 +1754,13 @@
 
     function goBackPage() {
       if (view.screen === 'task') {
-        view = createBaseView({ screen: 'all_tasks', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+        view = createBaseView({ screen: 'all_tasks', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'all_tasks') {
-        view = createBaseView({ screen: 'categories', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+        view = createBaseView({ screen: 'categories', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'categories') {
-        view = createBaseView({ screen: 'home', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+        view = createBaseView({ screen: 'home', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else if (view.screen === 'home') {
-        view = createBaseView({ screen: 'dashboard', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+        view = createBaseView({ screen: 'dashboard', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
       } else {
         return;
       }
@@ -1740,27 +1793,27 @@
       document.querySelectorAll('[data-nav]').forEach(btn => {
         btn.onclick = () => {
           if (btn.dataset.nav === 'dashboard') {
-            view = createBaseView({ screen: 'dashboard', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+            view = createBaseView({ screen: 'dashboard', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
             render();
             return;
           }
           if (btn.dataset.nav === 'calendar') {
-            view = createBaseView({ screen: 'calendar', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+            view = createBaseView({ screen: 'calendar', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
             render();
             return;
           }
           if (btn.dataset.nav === 'home') {
-            view = createBaseView({ screen: 'home', showUpcomingDeadlines: view.showUpcomingDeadlines, showCompletedTasks: view.showCompletedTasks, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+            view = createBaseView({ screen: 'home', showUpcomingDeadlines: view.showUpcomingDeadlines, showCompletedTasks: view.showCompletedTasks, homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
             render();
             return;
           }
           if (btn.dataset.nav === 'categories') {
-            view = createBaseView({ screen: 'categories', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+            view = createBaseView({ screen: 'categories', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
             render();
             return;
           }
           if (btn.dataset.nav === 'all_tasks') {
-            view = createBaseView({ screen: 'all_tasks', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+            view = createBaseView({ screen: 'all_tasks', homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
             render();
             return;
           }
@@ -1801,7 +1854,7 @@
 
       document.querySelectorAll('[data-open-category]').forEach(card => {
         card.onclick = () => {
-          view = createBaseView({ screen: 'category', categoryId: Number(card.dataset.openCategory), homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, calendarMonthOffset: view.calendarMonthOffset || 0 });
+          view = createBaseView({ screen: 'category', categoryId: Number(card.dataset.openCategory), homePriorityFilter: view.homePriorityFilter, allTasksAccountableFilter: view.allTasksAccountableFilter, allTasksCategoryFilter: view.allTasksCategoryFilter, allTasksSort: view.allTasksSort, calendarMonthOffset: view.calendarMonthOffset || 0 });
           render();
         };
       });
@@ -1841,6 +1894,13 @@
       document.querySelectorAll('[data-filter-all-tasks-accountable]').forEach(select => {
         select.onchange = () => {
           view.allTasksAccountableFilter = select.value || 'all';
+          render();
+        };
+      });
+
+      document.querySelectorAll('[data-sort-all-tasks]').forEach(select => {
+        select.onchange = () => {
+          view.allTasksSort = select.value || 'alpha';
           render();
         };
       });
@@ -1915,7 +1975,7 @@
           if (!ensureAdminAccess()) return;
           const value = window.prompt('', task.accountable || '');
           if (value === null) return;
-          task.accountable = value.replace(/[^A-Za-z]/g, '').toUpperCase().slice(0, 8);
+          task.accountable = normalizeAccountableValue(value);
           saveData();
           render();
         };
@@ -1990,25 +2050,6 @@
         };
       });
 
-
-      document.querySelectorAll('[data-add-deadline]').forEach(btn => {
-        btn.onclick = (e) => {
-          e.stopPropagation();
-          if (!ensureAdminAccess()) return;
-          const newIndex = task.deadlines.length;
-          task.deadlines.push({ label: '', date: '', status: '', priority: 3, notes: '', notesOpen: false });
-          task.deadlineUi.editIndex = newIndex;
-          saveData();
-          render();
-          requestAnimationFrame(() => {
-            const input = document.querySelector(`[data-deadline-field="label"][data-deadline-index="${newIndex}"]`);
-            if (input) {
-              input.focus();
-            }
-          });
-        };
-      });
-
       document.querySelectorAll('[data-edit-deadline]').forEach(item => {
         const openEditor = () => {
           if (!ensureAdminAccess()) return;
@@ -2046,19 +2087,6 @@
           render();
           const input = document.querySelector(`[data-deadline-field="notes"][data-deadline-index="${index}"]`);
           if (input) input.focus();
-        };
-      });
-
-      document.querySelectorAll('[data-delete-deadline]').forEach(btn => {
-        btn.onclick = (e) => {
-          e.stopPropagation();
-          if (!ensureAdminAccess()) return;
-          const removedIndex = Number(btn.dataset.deleteDeadline);
-          task.deadlines.splice(removedIndex, 1);
-          if (task.deadlineUi.editIndex === removedIndex) task.deadlineUi.editIndex = -1;
-          else if (task.deadlineUi.editIndex > removedIndex) task.deadlineUi.editIndex -= 1;
-          saveData();
-          render();
         };
       });
 
@@ -2127,25 +2155,44 @@
       }
     });
 
-    function getTaskDeadline(task) {
-      if (!task || !Array.isArray(task.deadlines) || !task.deadlines.length) return null;
-      return task.deadlines[0] || null;
-    }
-
-    function formatExcelDisplayDate(dateString) {
-      const dateValue = toDateValue(dateString);
-      if (!dateValue) return String(dateString || '').trim();
-      return new Intl.DateTimeFormat('fr-BE', {
+    function exportExcel() {
+      if (!window.XLSX) {
+        alert('Librairie Excel indisponible.');
+        return;
+      }
+      const rows = [];
+      data.categories.forEach(category => {
+        category.tasks.forEach(task => {
+          const deadline = getTaskDeadline(task) || {};
+          rows.push({
+            'Catégorie': category.name,
+            'Tâche': task.name,
+            'Échéance': formatDisplayDate(deadline.date || ''),
+            'Demandeur': task.accountable || '',
+            'Prestataire / fournisseur': (task.sections.prestataire.notes || []).join('\n'),
+            'Produit / matériel': (task.sections.produit.notes || []).join('\n'),
+            'Procédure': (task.sections.procedure.notes || []).join('\n'),
+            'Gestion du stock': (task.sections.stock.notes || []).join('\n'),
+            'En cas d’urgence': (task.sections.urgence.notes || []).join('\n'),
+            'Priorité': getDeadlinePriorityValue(deadline.priority),
+            'Statut': deadline.status || '',
+            'Notes': deadline.notes || ''
+          });
+        });
+      });
+      const workbook = XLSX.utils.book_new();
+      const sheet = XLSX.utils.json_to_sheet(rows, { header: ['Catégorie','Tâche','Échéance','Demandeur','Prestataire / fournisseur','Produit / matériel','Procédure','Gestion du stock','En cas d’urgence','Priorité','Statut','Notes'] });
+      XLSX.utils.book_append_sheet(workbook, sheet, 'Suivi');
+      const today = new Date();
+      const formattedDate = new Intl.DateTimeFormat('fr-BE', {
         day: '2-digit',
         month: '2-digit',
         year: 'numeric'
-      }).format(dateValue);
+      }).format(today).replace(/\//g, '-');
+
+      XLSX.writeFile(workbook, `suivi_taches_${formattedDate}.xlsx`);
     }
 
-    function formatExcelPriority(priority) {
-      const value = getDeadlinePriorityValue(priority);
-      return value ? '*'.repeat(value) : '';
-    }
 
     function parseExcelSerialDate(value, date1904 = false) {
       const serial = Number(value);
@@ -2167,23 +2214,24 @@
       return `${normalized.getFullYear()}-${String(normalized.getMonth() + 1).padStart(2, '0')}-${String(normalized.getDate()).padStart(2, '0')}`;
     }
 
-    function normalizeImportedExcelDate(rawValue, workbook) {
-      if (rawValue === null || rawValue === undefined || rawValue === '') return '';
+    function normalizeImportedExcelDate(value, workbook) {
+      if (value === null || value === undefined || value === '') return '';
 
-      if (rawValue instanceof Date && !Number.isNaN(rawValue.getTime())) {
-        return `${rawValue.getFullYear()}-${String(rawValue.getMonth() + 1).padStart(2, '0')}-${String(rawValue.getDate()).padStart(2, '0')}`;
+      if (value instanceof Date && !Number.isNaN(value.getTime())) {
+        return `${value.getFullYear()}-${String(value.getMonth() + 1).padStart(2, '0')}-${String(value.getDate()).padStart(2, '0')}`;
       }
 
-      if (typeof rawValue === 'number') {
-        return parseExcelSerialDate(rawValue, !!(workbook && workbook.Workbook && workbook.Workbook.WBProps && workbook.Workbook.WBProps.date1904));
+      if (typeof value === 'number') {
+        return parseExcelSerialDate(value, !!(workbook && workbook.Workbook && workbook.Workbook.WBProps && workbook.Workbook.WBProps.date1904));
       }
 
-      const raw = String(rawValue).trim();
+      const raw = String(value).trim();
       if (!raw) return '';
 
-      if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
+      let match = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+      if (match) return raw;
 
-      let match = raw.match(/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4})$/);
+      match = raw.match(/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4})$/);
       if (match) {
         const [, day, month, year] = match;
         return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
@@ -2202,94 +2250,6 @@
       return raw;
     }
 
-    function exportExcel() {
-      if (!window.XLSX) {
-        alert('Librairie Excel indisponible.');
-        return;
-      }
-
-      const headers = [
-        'Catégorie',
-        'Tâche',
-        'Échéance',
-        'Demandeur',
-        'Priorité',
-        'Statut',
-        'Notes',
-        'Prestataire / fournisseur',
-        'Produit / matériel',
-        'Procédure',
-        'Gestion du stock',
-        'En cas d’urgence'
-      ];
-
-      const rows = [];
-      data.categories.forEach(category => {
-        category.tasks.forEach(task => {
-          const deadline = getTaskDeadline(task) || {};
-          rows.push({
-            'Catégorie': category.name || '',
-            'Tâche': task.name || '',
-            'Échéance': formatExcelDisplayDate(deadline.date || ''),
-            'Demandeur': task.accountable || '',
-            'Priorité': formatExcelPriority(deadline.priority),
-            'Statut': deadline.status || '',
-            'Notes': deadline.notes || '',
-            'Prestataire / fournisseur': (task.sections.prestataire.notes || []).join('\n'),
-            'Produit / matériel': (task.sections.produit.notes || []).join('\n'),
-            'Procédure': (task.sections.procedure.notes || []).join('\n'),
-            'Gestion du stock': (task.sections.stock.notes || []).join('\n'),
-            'En cas d’urgence': (task.sections.urgence.notes || []).join('\n')
-          });
-        });
-      });
-
-      const workbook = XLSX.utils.book_new();
-      const sheet = XLSX.utils.json_to_sheet(rows, { header: headers });
-      sheet['!cols'] = [
-        { wch: 19 },
-        { wch: 40 },
-        { wch: 15 },
-        { wch: 15 },
-        { wch: 12 },
-        { wch: 10 },
-        { wch: 35 },
-        { wch: 35 },
-        { wch: 35 },
-        { wch: 35 },
-        { wch: 35 },
-        { wch: 35 }
-      ];
-
-      if (sheet['!ref']) {
-        const range = XLSX.utils.decode_range(sheet['!ref']);
-        for (let row = range.s.r; row <= range.e.r; row += 1) {
-          [2, 3, 4, 5].forEach(col => {
-            const cellRef = XLSX.utils.encode_cell({ r: row, c: col });
-            if (!sheet[cellRef]) return;
-            sheet[cellRef].s = {
-              ...(sheet[cellRef].s || {}),
-              alignment: {
-                horizontal: 'center',
-                vertical: 'center',
-                wrapText: true
-              }
-            };
-          });
-        }
-      }
-
-      XLSX.utils.book_append_sheet(workbook, sheet, 'Suivi');
-      const today = new Date();
-      const formattedDate = new Intl.DateTimeFormat('fr-BE', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-      }).format(today).replace(/\//g, '-');
-
-      XLSX.writeFile(workbook, `suivi_taches_${formattedDate}.xlsx`, { cellStyles: true });
-    }
-
     async function importExcel(file) {
       if (!window.XLSX) {
         alert('Librairie Excel indisponible.');
@@ -2298,7 +2258,7 @@
       const buffer = await file.arrayBuffer();
       const workbook = XLSX.read(buffer, { type: 'array', cellDates: true, raw: false });
       const sheet = workbook.Sheets[workbook.SheetNames[0]];
-      const rows = XLSX.utils.sheet_to_json(sheet, { defval: '', raw: false });
+      const rows = XLSX.utils.sheet_to_json(sheet, { defval: '' });
       const next = { categories: [] };
 
       rows.forEach(row => {
@@ -2313,23 +2273,21 @@
         }
 
         const task = createTask(categoryName, taskName);
-        task.accountable = String(row['Demandeur'] || row['Accountable'] || '').trim().toUpperCase().slice(0, 8);
+        task.accountable = normalizeAccountableValue(row['Demandeur'] || row['Accountable'] || '');
         PARAM_DEFS.forEach(({ key, label }) => {
           task.sections[key].notes = String(row[label] || '')
             .split(/\r?\n+/)
             .map(v => v.trim())
             .filter(Boolean);
         });
-
         task.deadlines = [{
-          label: '',
+          label: String(row['Étape'] || '').trim(),
           date: normalizeImportedExcelDate(row['Échéance'] || '', workbook),
           status: String(row['Statut'] || '').trim(),
           priority: getDeadlinePriorityValue(row['Priorité']),
           notes: String(row['Notes'] || row['Notes échéance'] || '').trim(),
           notesOpen: !!String(row['Notes'] || row['Notes échéance'] || '').trim()
         }];
-
         category.tasks.push(task);
       });
 
