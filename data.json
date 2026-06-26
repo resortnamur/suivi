@@ -4,68 +4,14 @@
       "name": "Aménagements divers",
       "tasks": [
         {
-          "id": "amenagements-divers-clim-caisse",
+          "id": "amenagements-divers-motorisation-porte-d-entree-casino",
           "category": "Aménagements divers",
-          "name": "Clim caisse",
-          "accountable": "HT",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": [
-                "nécessité de travaux importants pour relier la clim à la caisse - (clim portable renvoie la chaleur à l'intérieur)"
-              ]
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "amenagements-divers-securite-toitures",
-          "category": "Aménagements divers",
-          "name": "Sécurité toitures",
+          "name": "Motorisation porte d'entrée casino",
           "accountable": "HT",
           "sections": {
             "prestataire": {
               "notes": [
-                "?"
+                "ALL AXCESS"
               ]
             },
             "produit": {
@@ -108,12 +54,328 @@
           },
           "deadlines": [
             {
-              "label": "Signature du devis - date",
-              "date": "2026-05-01",
-              "status": "À faire",
+              "label": "",
+              "date": "2026-06-12",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 2,
+              "notes": "reste remplacement goulotte blanche côté casino - Intervention prévue le 9/06 reportée au 11/06 puis reportée à la semaine prochaine date ???",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-portique-sortie-casino",
+          "category": "Aménagements divers",
+          "name": "Portique sortie casino",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "DORMA"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 3,
+              "notes": "réparation faite",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-store-bar-ocean",
+          "category": "Aménagements divers",
+          "name": "Store bar OCEAN",
+          "accountable": "Katia",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "SEMAL"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 2,
+              "notes": "Date de pose attendue du menuisier",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-laverie-wellness",
+          "category": "Aménagements divers",
+          "name": "Laverie Wellness",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 0,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-plafonnage-fumoir-casino-club",
+          "category": "Aménagements divers",
+          "name": "Plafonnage fumoir casino club",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
+              "status": "Terminé",
               "priority": 3,
               "notes": "",
               "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-finalisation-salle-de-comptee",
+          "category": "Aménagements divers",
+          "name": "Finalisation salle de comptée",
+          "accountable": "Adrien",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false,
+              "input": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-30",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "reste étagères a accrocher au mur et déplacement prises data - Adrien doit faire vider armoire local coffre pour déplacer armoires métalliques",
+              "notesOpen": true
             }
           ],
           "deadlineUi": {
@@ -121,9 +383,832 @@
           }
         },
         {
-          "id": "amenagements-divers-regie-steaming-renovation",
+          "id": "amenagements-divers-nouvel-espace-croupiers-etage-casino-club",
           "category": "Aménagements divers",
-          "name": "Régie steaming rénovation",
+          "name": "Nouvel espace croupiers étage casino club",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "AEJ rénovations Varella"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false,
+              "input": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-01",
+              "finalDate": "2026-12-31",
+              "status": "en attente",
+              "priority": 3,
+              "notes": "rapport reçu, rapport positif, attente début travaux",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": -1
+          }
+        },
+        {
+          "id": "amenagements-divers-radiateur-tv-local-pose-manager",
+          "category": "Aménagements divers",
+          "name": "Radiateur + TV local pose manager",
+          "accountable": "Adrien",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "reste radiateur - Adrien commande un IPTV - câble data à tirer",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-ventilation-canalisations-casino-pour-odeurs",
+          "category": "Aménagements divers",
+          "name": "Ventilation canalisations casino pour odeurs",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Wallon"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-01",
+              "finalDate": "",
+              "status": "",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-clim-local-circus-service",
+          "category": "Aménagements divers",
+          "name": "Clim local Circus Service",
+          "accountable": "Laurent",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "EQUANS"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-15",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "commande ok - prévu +/- 1ère quinzaine de juillet",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-devis-cuisine-nouvel-espace-croupiers",
+          "category": "Aménagements divers",
+          "name": "Devis cuisine nouvel espace croupiers",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "À étudier",
+              "priority": 2,
+              "notes": "HT doit aller chez cuisiniste",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-devis-remplacement-di-casino-club",
+          "category": "Aménagements divers",
+          "name": "Devis remplacement DI casino club",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "BEGELEC"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "2026-12-01",
+              "status": "en attente",
+              "priority": 3,
+              "notes": "Rappel BEGELEC le 18/05 - attente des plans de Balto",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-eclairage-facade-casino",
+          "category": "Aménagements divers",
+          "name": "Eclairage façade casino",
+          "accountable": "Karim",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "REXEL - ULTRASONS"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "en attente",
+              "priority": 2,
+              "notes": "Offre à corriger et compléter",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-film-anti-uv-chambres-resto",
+          "category": "Aménagements divers",
+          "name": "Film anti UV chambres + resto",
+          "accountable": "Paolo",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "nouveau test",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-temporisation-fermeture-portes-quai-de-livraison",
+          "category": "Aménagements divers",
+          "name": "Temporisation fermeture portes quai de livraison",
+          "accountable": "Frank",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "À étudier",
+              "priority": 2,
+              "notes": "offre à modifier",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-temporisation-monte-charge",
+          "category": "Aménagements divers",
+          "name": "Temporisation monte-charge",
+          "accountable": "Frank",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "À étudier",
+              "priority": 2,
+              "notes": "offre à modifier",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-alimentation-eau-pour-nouvelles-fontaines-a-eau-hotel",
+          "category": "Aménagements divers",
+          "name": "Alimentation eau pour nouvelles fontaines à eau hôtel",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Jean-Louis"
+              ]
+            },
+            "produit": {
+              "notes": [
+                "ok"
+              ]
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-15",
+              "finalDate": "",
+              "status": "en attente",
+              "priority": 1,
+              "notes": "Alim + décharge ok",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-probleme-parking-chene",
+          "category": "Aménagements divers",
+          "name": "Problème parking CHENE",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "CHENE"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-15",
+              "finalDate": "",
+              "status": "en attente",
+              "priority": 2,
+              "notes": "teinte plus clair pour les couvres-murs demandées",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-sonnettes-quai-de-livraison",
+          "category": "Aménagements divers",
+          "name": "Sonnettes quai de livraison",
+          "accountable": "Marcia",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-15",
+              "finalDate": "",
+              "status": "À étudier",
+              "priority": 1,
+              "notes": "test à faire - ICT doit configurer téléphones mardi 26/05",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-fin-sol-cuisine-traiteur",
+          "category": "Aménagements divers",
+          "name": "Fin sol cuisine traiteur",
           "accountable": "HT",
           "sections": {
             "prestataire": {
@@ -169,28 +1254,517 @@
           },
           "deadlines": [
             {
-              "label": "étude des besoins",
-              "date": "2026-05-01",
-              "status": "À étudier",
-              "priority": 3,
-              "notes": "",
-              "notesOpen": false
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "en attente",
+              "priority": 1,
+              "notes": "Sterfput à créer et carrelage à acheter",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-rafraichissement-caisse",
+          "category": "Aménagements divers",
+          "name": "Rafraichissement caisse",
+          "accountable": "Adrien",
+          "sections": {
+            "prestataire": {
+              "notes": []
             },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
             {
-              "label": "lien avec l'espace croupiers",
-              "date": "2026-05-01",
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
               "status": "À étudier",
+              "priority": 1,
+              "notes": "A programmer après peinture des chambres",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-rafraichissement-local-coffres",
+          "category": "Aménagements divers",
+          "name": "Rafraichissement local coffres",
+          "accountable": "Adrien",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "À étudier",
+              "priority": 1,
+              "notes": "A programmer après peinture des chambres",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-rafraichissement-sas-caisse",
+          "category": "Aménagements divers",
+          "name": "Rafraichissement sas caisse",
+          "accountable": "Adrien",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "À étudier",
+              "priority": 1,
+              "notes": "A programmer après peinture des chambres",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-rafraichissement-sas-comptee",
+          "category": "Aménagements divers",
+          "name": "Rafraichissement sas comptée",
+          "accountable": "Adrien",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "À étudier",
+              "priority": 1,
+              "notes": "A programmer après peinture des chambres",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-renforcement-sas-group4",
+          "category": "Aménagements divers",
+          "name": "Renforcement sas Group4",
+          "accountable": "Adrien",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "À étudier",
+              "priority": 1,
+              "notes": "méthode à déterminer",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-modification-terrasse-fumeurs",
+          "category": "Aménagements divers",
+          "name": "Modification terrasse fumeurs",
+          "accountable": "Karim",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "",
+              "finalDate": "2026-12-01",
+              "status": "en attente",
+              "priority": 3,
+              "notes": "en suspens - Permis d'urbanisme nécessaire",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "amenagements-divers-toiture-casino-club",
+          "category": "Aménagements divers",
+          "name": "Toiture Casino Club",
+          "accountable": "Liège",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "",
+              "finalDate": "2026-12-31",
+              "status": "À étudier",
+              "priority": 1,
+              "notes": "service achats Liège",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Chambres",
+      "tasks": [
+        {
+          "id": "chambres-coffres-autocollants",
+          "category": "Chambres",
+          "name": "Coffres autocollants",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Colorisprint"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false,
+              "input": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-15",
+              "finalDate": "",
+              "status": "Terminé",
               "priority": 2,
               "notes": "",
               "notesOpen": false
-            },
-            {
-              "label": "débuter les travaux",
-              "date": "2026-07-01",
-              "status": "À faire",
-              "priority": 3,
-              "notes": "",
-              "notesOpen": false
             }
           ],
           "deadlineUi": {
@@ -198,10 +1772,10 @@
           }
         },
         {
-          "id": "amenagements-divers-salles-de-bain-privilege",
-          "category": "Aménagements divers",
-          "name": "Salles de bain Privilège",
-          "accountable": "DE",
+          "id": "chambres-pommeau-des-douches",
+          "category": "Chambres",
+          "name": "Pommeau des douches",
+          "accountable": "David",
           "sections": {
             "prestataire": {
               "notes": []
@@ -244,16 +1818,26 @@
               "open": false
             }
           },
-          "deadlines": [],
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-15",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
         },
         {
-          "id": "amenagements-divers-salle-de-comptee",
-          "category": "Aménagements divers",
-          "name": "Salle de comptée",
-          "accountable": "AC",
+          "id": "chambres-remplacement-chassis-106",
+          "category": "Chambres",
+          "name": "Remplacement châssis 106",
+          "accountable": "David",
           "sections": {
             "prestataire": {
               "notes": []
@@ -296,16 +1880,26 @@
               "open": false
             }
           },
-          "deadlines": [],
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 2,
+              "notes": "Réglage test avant d'aller plus loin",
+              "notesOpen": true
+            }
+          ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
         },
         {
-          "id": "amenagements-divers-decorations-ete-hivers",
-          "category": "Aménagements divers",
-          "name": "Décorations été / hivers",
-          "accountable": "JS",
+          "id": "chambres-probleme-tringle-chambre-205",
+          "category": "Chambres",
+          "name": "Problème tringle chambre 205",
+          "accountable": "David",
           "sections": {
             "prestataire": {
               "notes": []
@@ -348,9 +1942,710 @@
               "open": false
             }
           },
-          "deadlines": [],
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-28",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 2,
+              "notes": "chambre Douglas",
+              "notesOpen": true
+            }
+          ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "chambres-protection-mur-table-de-nuit-chambres",
+          "category": "Chambres",
+          "name": "Protection mur table de nuit chambres",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-30",
+              "finalDate": "",
+              "status": "en cours",
+              "priority": 1,
+              "notes": "marchandises reçue le 22/05",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "chambres-modification-sdb-chambres-privileges",
+          "category": "Chambres",
+          "name": "Modification SDB chambres privilèges",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "en attente",
+              "priority": 1,
+              "notes": "Marchandises commandées",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "chambres-remplacement-pots-de-fleurs-terrasse-chambres",
+          "category": "Chambres",
+          "name": "Remplacement pots de fleurs terrasse chambres",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "FLORATOIT"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "Visite le 11/05 - devis en attente - dernier rappel le 22/05 - rappel par email + téléphone 05/06",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "chambres-coffres-piles",
+          "category": "Chambres",
+          "name": "Coffres piles",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "remplacement anticipé des piles ?"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "commencé par Gaby",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "chambres-encadrements-tv-chambres",
+          "category": "Chambres",
+          "name": "Encadrements TV chambres",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "commencé par Gaby",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "chambres-radiateur-sdb-chambres",
+          "category": "Chambres",
+          "name": "Radiateur SDB chambres",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "en cours",
+              "priority": 1,
+              "notes": "commencé par Gaby",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "chambres-protection-marches-chambres-terrasses-2",
+          "category": "Chambres",
+          "name": "Protection marches chambres terrasses +2",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-15",
+              "finalDate": "",
+              "status": "À faire",
+              "priority": 1,
+              "notes": "commencé par Gaby",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "chambres-renforts-paroi-de-douche-chambres",
+          "category": "Chambres",
+          "name": "Renforts paroi de douche chambres",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "commencé par Gaby",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "chambres-tablettes-lavabo",
+          "category": "Chambres",
+          "name": "Tablettes lavabo",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "commencé par Gaby",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Extérieur",
+      "tasks": [
+        {
+          "id": "exterieur-plantation-parterres-parking",
+          "category": "Extérieur",
+          "name": "Plantation parterres parking",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-15",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 1,
+              "notes": "début 3/06",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "exterieur-pelouse-cote-citadelle",
+          "category": "Extérieur",
+          "name": "Pelouse côté citadelle",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2027-05-01",
+              "finalDate": "chaque année",
+              "status": "Terminé",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
           }
         }
       ]
@@ -358,6 +2653,132 @@
     {
       "name": "Déchets",
       "tasks": [
+        {
+          "id": "dechets-colis-reception",
+          "category": "Déchets",
+          "name": "Colis Réception",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "placer les cartons dans le bac - gros colis au quai de livraison"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 1,
+              "notes": "face à la Blue Ocean - communication à faire par CVK",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "dechets-dechets-garage-bacs-a-dechets",
+          "category": "Déchets",
+          "name": "Déchets Garage - bacs à déchets",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 0,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
         {
           "id": "dechets-parc-a-containers",
           "category": "Déchets",
@@ -409,16 +2830,17 @@
           },
           "deadlines": [
             {
-              "label": "nouvelle disposition",
-              "date": "2026-04-01",
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
               "status": "Terminé",
-              "priority": 1,
+              "priority": 0,
               "notes": "",
               "notesOpen": false
             }
           ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
         },
         {
@@ -472,140 +2894,17 @@
           },
           "deadlines": [
             {
-              "label": "établir une procédure",
-              "date": "2026-07-01",
-              "status": "À faire",
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "Régulier",
               "priority": 1,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "dechets-dechets-garage-bacs-a-dechets",
-          "category": "Déchets",
-          "name": "Déchets Garage - bacs à déchets",
-          "accountable": "HT",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "installation de bacs à cartons dans les différentes réserves",
-              "date": "2026-04-01",
-              "status": "Terminé",
-              "priority": 1,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "dechets-colis-reception",
-          "category": "Déchets",
-          "name": "Colis Réception",
-          "accountable": "HT",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": [
-                "placer les cartons dans le bac - gros colis au quai de livraison"
-              ]
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "placement d'un bac à carton",
-              "date": "2026-04-15",
-              "status": "À faire",
-              "priority": 1,
-              "notes": "face à la Blue Ocean",
+              "notes": "décision à prendre pour certaines choses à garder ou à jeter",
               "notesOpen": true
             }
           ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
         }
       ]
@@ -614,88 +2913,14 @@
       "name": "Électricité",
       "tasks": [
         {
-          "id": "electricite-suivi-en-cas-de-coupure",
+          "id": "electricite-cabine-haute-tension",
           "category": "Électricité",
-          "name": "Suivi en cas de coupure",
-          "accountable": "HT",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "suivi par Equans ?",
-              "date": "2026-04-15",
-              "status": "En cours",
-              "priority": 3,
-              "notes": "",
-              "notesOpen": false
-            },
-            {
-              "label": "communiquer la procédure aux Duty Managers",
-              "date": "2026-04-15",
-              "status": "À faire",
-              "priority": 2,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        }
-      ]
-    },
-    {
-      "name": "Matériel",
-      "tasks": [
-        {
-          "id": "materiel-urinoirs",
-          "category": "Matériel",
-          "name": "Urinoirs",
+          "name": "Cabine Haute Tension",
           "accountable": "HT",
           "sections": {
             "prestataire": {
               "notes": [
-                "Bernard Wallon"
+                "Collignon"
               ]
             },
             "produit": {
@@ -703,315 +2928,16 @@
             },
             "procedure": {
               "notes": [
-                "produit à mettre régulièrement"
+                "0497/05.13.97 - 24/24"
               ]
             },
             "stock": {
               "notes": []
             },
             "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "trouver le bon produit",
-              "date": "2026-04-15",
-              "status": "À faire",
-              "priority": 2,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-serrures-sans-code",
-          "category": "Matériel",
-          "name": "Serrures sans code",
-          "accountable": "DE",
-          "sections": {
-            "prestataire": {
               "notes": [
-                "Axces"
+                "0497/05.13.97 - 24/24"
               ]
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-serrures-avec-code",
-          "category": "Matériel",
-          "name": "Serrures avec code",
-          "accountable": "HT",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": [
-                "?"
-              ]
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "établir une procédure",
-              "date": "2026-07-01",
-              "status": "À faire",
-              "priority": 1,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-moquettes",
-          "category": "Matériel",
-          "name": "Moquettes",
-          "accountable": "XX",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": [
-                "HK nettoie d'abord avec son produit - si pb --> intervention de la maintenance"
-              ]
-            },
-            "stock": {
-              "notes": [
-                "?"
-              ]
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-matelas",
-          "category": "Matériel",
-          "name": "Matelas",
-          "accountable": "DE",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": [
-                "?"
-              ]
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "établir une procédure",
-              "date": "2026-06-01",
-              "status": "À faire",
-              "priority": 3,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-murs-peintures",
-          "category": "Matériel",
-          "name": "Murs (peintures)",
-          "accountable": "DE",
-          "sections": {
-            "prestataire": {
-              "notes": [
-                "peintre externe"
-              ]
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": [
-                "tous les un an et demi"
-              ]
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
             }
           },
           "ui": {
@@ -1042,668 +2968,16 @@
           "deadlines": [
             {
               "label": "",
-              "date": "",
-              "status": "",
-              "priority": 0,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-coffres-piles",
-          "category": "Matériel",
-          "name": "Coffres piles",
-          "accountable": "DE",
-          "sections": {
-            "prestataire": {
-              "notes": [
-                "?"
-              ]
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": [
-                "remplacement anticipé des piles ?"
-              ]
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "établir une procédure",
-              "date": "2026-04-20",
-              "status": "À faire",
-              "priority": 1,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-tablettes-lavabo",
-          "category": "Matériel",
-          "name": "Tablettes lavabo",
-          "accountable": "DE",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "50% réalisé",
-              "date": "2026-04-15",
-              "status": "En cours",
-              "priority": 2,
-              "notes": "",
-              "notesOpen": false
-            },
-            {
-              "label": "100% réalisé",
-              "date": "2026-07-15",
-              "status": "En cours",
-              "priority": 2,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-coffres-autocollants",
-          "category": "Matériel",
-          "name": "Coffres autocollants",
-          "accountable": "DE",
-          "sections": {
-            "prestataire": {
-              "notes": [
-                "Colorisprint"
-              ]
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "50% modifié",
-              "date": "2026-04-10",
-              "status": "En cours",
-              "priority": 1,
-              "notes": "",
-              "notesOpen": false
-            },
-            {
-              "label": "100% modifié",
-              "date": "2026-07-01",
-              "status": "À faire",
-              "priority": 1,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-pommeau-des-douches",
-          "category": "Matériel",
-          "name": "Pommeau des douches",
-          "accountable": "DE",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "50% terminé",
-              "date": "2026-04-10",
-              "status": "",
-              "priority": 2,
-              "notes": "",
-              "notesOpen": false
-            },
-            {
-              "label": "100% terminé",
-              "date": "2026-07-31",
-              "status": "",
-              "priority": 2,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-materiel-mis-a-disposition-des-clients",
-          "category": "Matériel",
-          "name": "Matériel mis à disposition des clients",
-          "accountable": "DE",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": [
-                "?"
-              ]
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "établir une procédure",
-              "date": "2026-06-01",
-              "status": "À faire",
+              "date": "2026-06-26",
+              "finalDate": "",
+              "status": "Terminé",
               "priority": 3,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-televiseurs-encadrements",
-          "category": "Matériel",
-          "name": "Téléviseurs encadrements",
-          "accountable": "DE",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "50% réalisé",
-              "date": "2026-05-15",
-              "status": "En cours",
-              "priority": 1,
-              "notes": "",
-              "notesOpen": false
-            },
-            {
-              "label": "100% réalisé",
-              "date": "2026-07-15",
-              "status": "En cours",
-              "priority": 1,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-televiseurs-chromecast",
-          "category": "Matériel",
-          "name": "Téléviseurs chromecast",
-          "accountable": "DE",
-          "sections": {
-            "prestataire": {
-              "notes": [
-                "Screen Service"
-              ]
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-ecrans-des-salles",
-          "category": "Matériel",
-          "name": "Écrans des salles",
-          "accountable": "DE",
-          "sections": {
-            "prestataire": {
-              "notes": [
-                "Barco",
-                "Dune"
-              ]
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": [
-                "?"
-              ]
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "commander de nouveaux bitougnous",
-              "date": "2026-05-06",
-              "status": "À faire",
-              "priority": 1,
-              "notes": "CVK contacte Dune",
+              "notes": "Garde Collignon - 0497/05.13.97 - 24/24",
               "notesOpen": true
             }
           ],
           "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-portes-casino",
-          "category": "Matériel",
-          "name": "Portes casino",
-          "accountable": "HT",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "Changement du moteur",
-              "date": "2026-04-07",
-              "status": "En attente",
-              "priority": 3,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "materiel-portillons-casino",
-          "category": "Matériel",
-          "name": "Portillons casino",
-          "accountable": "HT",
-          "sections": {
-            "prestataire": {
-              "notes": [
-                "Dorma (portiques)",
-                "JMR (cellules de détection)"
-              ]
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": [
-                "?"
-              ]
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "amélioration du mécanisme",
-              "date": "2026-07-01",
-              "status": "À faire",
-              "priority": 2,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
         }
       ]
@@ -1711,58 +2985,6 @@
     {
       "name": "Équipements",
       "tasks": [
-        {
-          "id": "equipements-tenues-staff",
-          "category": "Équipements",
-          "name": "Tenues staff",
-          "accountable": "HT",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
         {
           "id": "equipements-diable-electrique",
           "category": "Équipements",
@@ -1812,24 +3034,17 @@
           },
           "deadlines": [
             {
-              "label": "achat",
-              "date": "2026-04-01",
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
               "status": "Terminé",
               "priority": 1,
-              "notes": "",
-              "notesOpen": false
-            },
-            {
-              "label": "livraison",
-              "date": "2026-06-10",
-              "status": "En attente",
-              "priority": 1,
-              "notes": "",
-              "notesOpen": false
+              "notes": "en production livraison prévue début juillet",
+              "notesOpen": true
             }
           ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
         },
         {
@@ -1881,28 +3096,29 @@
           },
           "deadlines": [
             {
-              "label": "livraison",
-              "date": "2026-04-01",
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
               "status": "Terminé",
-              "priority": 2,
+              "priority": 1,
               "notes": "",
               "notesOpen": false
             }
           ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
         }
       ]
     },
     {
-      "name": "Nettoyage",
+      "name": "Matériel",
       "tasks": [
         {
-          "id": "nettoyage-nettoyage-des-terrasses-nettoyage-annuel",
-          "category": "Nettoyage",
-          "name": "Nettoyage des terrasses - nettoyage annuel",
-          "accountable": "DE",
+          "id": "materiel-fabrication-meuble-lobby-1er-pour-event",
+          "category": "Matériel",
+          "name": "Fabrication meuble lobby 1er pour Event",
+          "accountable": "Events",
           "sections": {
             "prestataire": {
               "notes": []
@@ -1947,83 +3163,23 @@
           },
           "deadlines": [
             {
-              "label": "nettoyage annuel",
-              "date": "2026-05-01",
-              "status": "À faire",
-              "priority": 2,
-              "notes": "",
-              "notesOpen": false
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 1,
+              "notes": "reste étagère à accrocher au mur",
+              "notesOpen": true
             }
           ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
         },
         {
-          "id": "nettoyage-nettoyage-des-terrasses-nettoyage-quotidien",
-          "category": "Nettoyage",
-          "name": "Nettoyage des terrasses - nettoyage quotidien",
-          "accountable": "DE",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            },
-            "deadlines": {
-              "open": false
-            }
-          },
-          "deadlines": [
-            {
-              "label": "établir une procédure",
-              "date": "2026-06-01",
-              "status": "À faire",
-              "priority": 3,
-              "notes": "",
-              "notesOpen": false
-            }
-          ],
-          "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "nettoyage-entretien-des-abords-exterieurs",
-          "category": "Nettoyage",
-          "name": "Entretien des abords extérieurs",
+          "id": "materiel-portes-casino",
+          "category": "Matériel",
+          "name": "Portes casino",
           "accountable": "HT",
           "sections": {
             "prestataire": {
@@ -2067,25 +3223,154 @@
               "open": false
             }
           },
-          "deadlines": [],
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 2,
+              "notes": "reste un morceau de goulotte à remplacer - pièce en commande",
+              "notesOpen": true
+            }
+          ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
-        }
-      ]
-    },
-    {
-      "name": "Prévention",
-      "tasks": [
+        },
         {
-          "id": "prevention-extincteurs",
-          "category": "Prévention",
-          "name": "Extincteurs",
-          "accountable": "CVK",
+          "id": "materiel-stand-marketing",
+          "category": "Matériel",
+          "name": "Stand Marketing",
+          "accountable": "Céline",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "materiel-ajout-cameras-potences-jt",
+          "category": "Matériel",
+          "name": "Ajout caméras potences JT",
+          "accountable": "Frank",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-30",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 2,
+              "notes": "Caméras reçues 27/05 - socles peints 28/05 - installation semaine 23",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "materiel-son-wellness-hs",
+          "category": "Matériel",
+          "name": "Son wellness HS",
+          "accountable": "HT",
           "sections": {
             "prestataire": {
               "notes": [
-                "?"
+                "Etilux"
               ]
             },
             "produit": {
@@ -2128,43 +3413,539 @@
           },
           "deadlines": [
             {
-              "label": "Révision annuelle",
-              "date": "2026-04-01",
-              "status": "Terminé",
-              "priority": 1,
-              "notes": "",
-              "notesOpen": false
-            },
-            {
-              "label": "Mise à jour des plans",
-              "date": "2026-05-10",
+              "label": "",
+              "date": "2026-07-01",
+              "finalDate": "",
               "status": "En cours",
               "priority": 1,
-              "notes": "",
-              "notesOpen": false
+              "notes": "équipement de nouveau reparti pour analyse chez le fournisseur",
+              "notesOpen": true
             }
           ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
         },
         {
-          "id": "prevention-acces-pompiers",
-          "category": "Prévention",
-          "name": "Accès pompiers",
+          "id": "materiel-ecran-suspendu-nouvelle-roulette",
+          "category": "Matériel",
+          "name": "Ecran suspendu nouvelle roulette",
+          "accountable": "Jean-Marc",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-15",
+              "finalDate": "",
+              "status": "En attente",
+              "priority": 1,
+              "notes": "Devis potence demandé chez ULTRASONS - rappel le 10/06",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "materiel-ecrans-des-salles",
+          "category": "Matériel",
+          "name": "Écrans des salles",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Barco 04-223 56 54",
+                "Dune"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": [
+                "?"
+              ]
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-15",
+              "finalDate": "",
+              "status": "À faire",
+              "priority": 1,
+              "notes": "CVK contacte Dune",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "materiel-moteur-porte-garage",
+          "category": "Matériel",
+          "name": "Moteur porte garage",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-15",
+              "finalDate": "",
+              "status": "En attente",
+              "priority": 1,
+              "notes": "Offre à recevoir rappel fait le 29/05",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "materiel-remplacement-blocs-secours-deffectueux",
+          "category": "Matériel",
+          "name": "Remplacement blocs secours déffectueux",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-15",
+              "finalDate": "",
+              "status": "en attente",
+              "priority": 1,
+              "notes": "1 des 2 à été remplacé, l'autre à un problème de communication - fournisseur cherche une solution",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "materiel-remplacement-camera-roulettes-electroniques",
+          "category": "Matériel",
+          "name": "Remplacement caméra roulettes électroniques",
+          "accountable": "Jean-Marc",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-15",
+              "finalDate": "",
+              "status": "En attente",
+              "priority": 1,
+              "notes": "offre de Stéphane DUBOIS envoyée à JM",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "materiel-plans-reperage-blocs-de-secours",
+          "category": "Matériel",
+          "name": "Plans repérage blocs de secours",
           "accountable": "CVK",
           "sections": {
             "prestataire": {
               "notes": []
             },
             "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "À faire",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "materiel-probleme-chromecast-chambres",
+          "category": "Matériel",
+          "name": "Problème chromecast chambres",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-08-01",
+              "finalDate": "",
+              "status": "en cours",
+              "priority": 2,
+              "notes": "normalement résolu par SCREEN SERVICES\nrécurrence des problèmes à analyser\nlié aux encadrements TV",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "materiel-materiel-mis-a-disposition-des-clients",
+          "category": "Matériel",
+          "name": "Matériel mis à disposition des clients",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
               "notes": [
-                "boîtier réception"
+                "?"
               ]
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "À faire",
+              "priority": 1,
+              "notes": "procédure pour contrôle du matériel",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "materiel-serrures-electronique-des-portes-sans-code",
+          "category": "Matériel",
+          "name": "Serrures électronique des portes sans code",
+          "accountable": "",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Axces"
+              ]
+            },
+            "produit": {
+              "notes": []
             },
             "procedure": {
               "notes": [
-                "casser le boîtier en cas d'urgence"
+                "tous les ans ? (à vérifier)"
               ]
             },
             "stock": {
@@ -2196,30 +3977,477 @@
               "input": false
             },
             "deadlines": {
-              "open": false,
-              "input": false
+              "open": false
             }
           },
           "deadlines": [
             {
-              "label": "1",
-              "date": "2026-04-15",
-              "status": "En attente",
-              "priority": 1,
-              "notes": "visite du capitaine des pompiers",
-              "notesOpen": true
-            },
-            {
-              "label": "double des clés",
-              "date": "2026-04-15",
-              "status": "À faire",
-              "priority": 1,
-              "notes": "cf. Hugues",
+              "label": "",
+              "date": "2027-01-01",
+              "finalDate": "",
+              "status": "Régulier",
+              "priority": 2,
+              "notes": "remplacement des piles - contrat annuel 2026 ok",
               "notesOpen": true
             }
           ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "materiel-serrures-electronique-des-portes-avec-code",
+          "category": "Matériel",
+          "name": "Serrures électronique des portes avec code",
+          "accountable": "",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Axces"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "?"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "",
+              "finalDate": "",
+              "status": "Régulier",
+              "priority": 2,
+              "notes": "sous contrat pour remplacement des piles",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Slots",
+      "tasks": [
+        {
+          "id": "slots-nouvelle-alimentation-ilot-mas-064",
+          "category": "Slots",
+          "name": "Nouvelle alimentation ilôt MAS 064…",
+          "accountable": "Laurent",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-06-26",
+              "finalDate": "",
+              "status": "Terminé",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Parking",
+      "tasks": [
+        {
+          "id": "parking-fixations-pour-drapeaux-parking",
+          "category": "Parking",
+          "name": "Fixations pour drapeaux parking",
+          "accountable": "Greg",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-01",
+              "finalDate": "",
+              "status": "En attente",
+              "priority": 1,
+              "notes": "Devis demandé chez ULTRASONS - rappel le 10/06",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "parking-cache-protection-borne-parking-a-remplacer",
+          "category": "Parking",
+          "name": "Cache protection borne parking a remplacer",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-15",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "commandé chez SKIDATA mais responsable ne travaille plus là…",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "parking-borne-recharge-electrique-supplementaires",
+          "category": "Parking",
+          "name": "Borne recharge électrique supplémentaires",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Engie, RenoEnergie, Interparking ?"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 2,
+              "notes": "validation Karim - attente réponse pour le sous-sol",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "parking-protections-cables-bornes-recharge-existantes",
+          "category": "Parking",
+          "name": "Protections câbles bornes recharge existantes",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "en même temps avec RenoEnergie",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Prévention",
+      "tasks": [
+        {
+          "id": "prevention-securisation-toitures",
+          "category": "Prévention",
+          "name": "Sécurisation toitures",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-01",
+              "finalDate": "",
+              "status": "en attente",
+              "priority": 3,
+              "notes": "devis à valider",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
           }
         },
         {
@@ -2269,15 +4497,91 @@
               "open": false
             }
           },
-          "deadlines": [],
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-10-01",
+              "finalDate": "",
+              "status": "",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
         },
         {
-          "id": "prevention-plan-interne-d-urgence",
+          "id": "prevention-extincteurs",
           "category": "Prévention",
-          "name": "Plan Interne d'Urgence",
+          "name": "Extincteurs",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "NU-SWIFT info@importex.be"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "chaque année"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2027-01-01",
+              "finalDate": "",
+              "status": "Régulier",
+              "priority": 2,
+              "notes": "Remplacement et stock ok",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "prevention-plans-reperage-extincteurs",
+          "category": "Prévention",
+          "name": "Plans repérage extincteurs",
           "accountable": "CVK",
           "sections": {
             "prestataire": {
@@ -2316,71 +4620,429 @@
             "urgence": {
               "open": false,
               "input": false
+            },
+            "deadlines": {
+              "open": false
             }
           },
-          "deadlines": [],
+          "deadlines": [
+            {
+              "label": "",
+              "date": "",
+              "finalDate": "",
+              "status": "Régulier",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
           "deadlineUi": {
-            "editIndex": -1
-          }
-        },
-        {
-          "id": "prevention-exercice-incendie",
-          "category": "Prévention",
-          "name": "Exercice Incendie",
-          "accountable": "CVK",
-          "sections": {
-            "prestataire": {
-              "notes": []
-            },
-            "produit": {
-              "notes": []
-            },
-            "procedure": {
-              "notes": []
-            },
-            "stock": {
-              "notes": []
-            },
-            "urgence": {
-              "notes": []
-            }
-          },
-          "ui": {
-            "prestataire": {
-              "open": false,
-              "input": false
-            },
-            "produit": {
-              "open": false,
-              "input": false
-            },
-            "procedure": {
-              "open": false,
-              "input": false
-            },
-            "stock": {
-              "open": false,
-              "input": false
-            },
-            "urgence": {
-              "open": false,
-              "input": false
-            }
-          },
-          "deadlines": [],
-          "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
         }
       ]
     },
     {
-      "name": "Wellness",
+      "name": "Entretien",
       "tasks": [
         {
-          "id": "wellness-wellness-travaux-d-etancheite",
-          "category": "Wellness",
-          "name": "Wellness travaux d'étanchéité",
+          "id": "entretien-murs-peintures",
+          "category": "Entretien",
+          "name": "Murs (peintures)",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "peintre externe"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "tous les un an et demi (confirmation David)"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-15",
+              "finalDate": "2026-09-01",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "Arrêté car hôtel full - reprend le 15/06",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "entretien-peinture-tapisserie-des-chambres",
+          "category": "Entretien",
+          "name": "Peinture + tapisserie des chambres",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-07-15",
+              "finalDate": "2026-09-01",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "reste 29 chambres à peindre dont 23 avec tapisserie - Arrêté car hôtel full - reprend le 15/06",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "entretien-fuite-conduit-cheminee-local-hvac",
+          "category": "Entretien",
+          "name": "Fuite conduit cheminée local HVAC",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "IMTECH"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 2,
+              "notes": "Promate démonté",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "entretien-renouvellement-des-matelas",
+          "category": "Entretien",
+          "name": "Renouvellement des matelas",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "?"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "2027-01-01",
+              "status": "Régulier",
+              "priority": 1,
+              "notes": "tous les 5 ans = standard",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "entretien-urinoirs",
+          "category": "Entretien",
+          "name": "Urinoirs",
+          "accountable": "HK",
+          "sections": {
+            "prestataire": {
+              "notes": [
+                "Bernard Wallon"
+              ]
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "produit à mettre régulièrement",
+                "Bernard Wallon 1x par an"
+              ]
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2027-04-01",
+              "finalDate": "",
+              "status": "Régulier",
+              "priority": 1,
+              "notes": "Fait le 12/05 - procédure ?",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "entretien-renouvellement-des-moquettes",
+          "category": "Entretien",
+          "name": "Renouvellement des moquettes",
+          "accountable": "David",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": [
+                "HK nettoie d'abord avec son produit - si pb --> intervention de la maintenance"
+              ]
+            },
+            "stock": {
+              "notes": [
+                "?"
+              ]
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "",
+              "finalDate": "",
+              "status": "Régulier",
+              "priority": 1,
+              "notes": "stock géré par la maintenance, remplacées au fur et à mesure",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Restaurant",
+      "tasks": [
+        {
+          "id": "restaurant-remplacement-monte-charge",
+          "category": "Restaurant",
+          "name": "Remplacement monte-charge",
           "accountable": "HT",
           "sections": {
             "prestataire": {
@@ -2426,52 +5088,91 @@
           },
           "deadlines": [
             {
-              "label": "débordement",
-              "date": "2026-04-04",
-              "status": "En cours",
-              "priority": 3,
-              "notes": "",
-              "notesOpen": false
-            },
-            {
-              "label": "wellness privatif",
-              "date": "",
-              "status": "",
-              "priority": 0,
-              "notes": "",
-              "notesOpen": false
-            },
-            {
-              "label": "wellness public",
-              "date": "",
-              "status": "",
-              "priority": 0,
-              "notes": "",
-              "notesOpen": false
-            },
-            {
-              "label": "local technique",
-              "date": "",
-              "status": "",
-              "priority": 0,
-              "notes": "",
-              "notesOpen": false
+              "label": "",
+              "date": "2026-07-15",
+              "finalDate": "",
+              "status": "En attente",
+              "priority": 2,
+              "notes": "offre de prix reçue",
+              "notesOpen": true
             }
           ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "restaurant-infiltration-caniveaux-cuisine-resto",
+          "category": "Restaurant",
+          "name": "Infiltration caniveaux cuisine resto",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "Réparation provisoire réalisée car produit reçu n'était pas le bon",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
           }
         }
       ]
     },
     {
-      "name": "Appolonia",
+      "name": "Nettoyage",
       "tasks": [
         {
-          "id": "appolonia-bugs-demeter",
-          "category": "Appolonia",
-          "name": "Bugs Demeter",
-          "accountable": "CVK",
+          "id": "nettoyage-nettoyage-facades-casino-cables-spots-clims",
+          "category": "Nettoyage",
+          "name": "Nettoyage façades casino (câbles, spots, clims,…)",
+          "accountable": "HT",
           "sections": {
             "prestataire": {
               "notes": []
@@ -2514,15 +5215,598 @@
               "open": false
             }
           },
-          "deadlines": [],
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "A planifier",
+              "priority": 1,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
           }
         },
         {
-          "id": "appolonia-tablettes-pre-inscription",
-          "category": "Appolonia",
-          "name": "Tablettes pré-inscription",
+          "id": "nettoyage-nettoyage-des-terrasses-nettoyage-annuel",
+          "category": "Nettoyage",
+          "name": "Nettoyage des terrasses - nettoyage annuel",
+          "accountable": "Dyler",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "",
+              "finalDate": "",
+              "status": "Régulier",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "nettoyage-nettoyage-des-terrasses-nettoyage-quotidien",
+          "category": "Nettoyage",
+          "name": "Nettoyage des terrasses - nettoyage quotidien",
+          "accountable": "Dyler",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "",
+              "finalDate": "",
+              "status": "Régulier",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Wellness",
+      "tasks": [
+        {
+          "id": "wellness-detecteur-de-fuite-local-technique-wellness",
+          "category": "Wellness",
+          "name": "Détecteur de fuite local technique wellness",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "En attente",
+              "priority": 2,
+              "notes": "Déjà demandé plusieurs fois à VIP WELLNESS",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "wellness-etancheite-wellness-prive",
+          "category": "Wellness",
+          "name": "Etanchéité wellness privé",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "En attente",
+              "priority": 3,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "wellness-fin-travaux-wellness-public",
+          "category": "Wellness",
+          "name": "Fin travaux wellness public",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 3,
+              "notes": "VIP WELLNESS ne finalise pas",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "wellness-modification-debordement-jacuzzi-public",
+          "category": "Wellness",
+          "name": "Modification débordement jacuzzi public",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "En attente",
+              "priority": 2,
+              "notes": "test avec nouvelles grilles à réaliser avant modification",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "wellness-modification-hammam-prive",
+          "category": "Wellness",
+          "name": "Modification hammam privé",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "En attente",
+              "priority": 2,
+              "notes": "se mettre d'accord sur l'ampleur des travaux",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "wellness-tub-de-douche-wellness",
+          "category": "Wellness",
+          "name": "Tub de douche wellness",
+          "accountable": "HT",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-01",
+              "finalDate": "",
+              "status": "En cours",
+              "priority": 1,
+              "notes": "IMTECH devait revenir - réparation provisoire tient",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Déco",
+      "tasks": [
+        {
+          "id": "deco-decorations-ete-hivers",
+          "category": "Déco",
+          "name": "Décorations été / hivers",
+          "accountable": "Karim",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "2026-09-30",
+              "finalDate": "",
+              "status": "Régulier",
+              "priority": 2,
+              "notes": "",
+              "notesOpen": false
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Régie Streaming",
+      "tasks": [
+        {
+          "id": "regie-streaming-ajout-2-lignes-separees-regie-william",
+          "category": "Régie Streaming",
+          "name": "Ajout 2 lignes séparées régie William",
           "accountable": "CVK",
           "sections": {
             "prestataire": {
@@ -2566,9 +5850,143 @@
               "open": false
             }
           },
-          "deadlines": [],
+          "deadlines": [
+            {
+              "label": "",
+              "date": "",
+              "finalDate": "",
+              "status": "en suspens",
+              "priority": 3,
+              "notes": "lors des travaux de rénovation",
+              "notesOpen": true
+            }
+          ],
           "deadlineUi": {
-            "editIndex": -1
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "regie-streaming-mise-en-conformite-regie-william",
+          "category": "Régie Streaming",
+          "name": "Mise en conformité régie William",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "",
+              "finalDate": "",
+              "status": "en suspens",
+              "priority": 3,
+              "notes": "lors des travaux de rénovation",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
+          }
+        },
+        {
+          "id": "regie-streaming-regie-william-ajout-wc-lavabo",
+          "category": "Régie Streaming",
+          "name": "Régie William ajout WC + lavabo",
+          "accountable": "CVK",
+          "sections": {
+            "prestataire": {
+              "notes": []
+            },
+            "produit": {
+              "notes": []
+            },
+            "procedure": {
+              "notes": []
+            },
+            "stock": {
+              "notes": []
+            },
+            "urgence": {
+              "notes": []
+            }
+          },
+          "ui": {
+            "prestataire": {
+              "open": false,
+              "input": false
+            },
+            "produit": {
+              "open": false,
+              "input": false
+            },
+            "procedure": {
+              "open": false,
+              "input": false
+            },
+            "stock": {
+              "open": false,
+              "input": false
+            },
+            "urgence": {
+              "open": false,
+              "input": false
+            },
+            "deadlines": {
+              "open": false
+            }
+          },
+          "deadlines": [
+            {
+              "label": "",
+              "date": "",
+              "finalDate": "",
+              "status": "en suspens",
+              "priority": 1,
+              "notes": "lors des travaux de rénovation",
+              "notesOpen": true
+            }
+          ],
+          "deadlineUi": {
+            "editIndex": 0
           }
         }
       ]
