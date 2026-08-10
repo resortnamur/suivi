@@ -351,6 +351,7 @@
     const LAST_UPDATE_KEY = 'suivi_taches_last_local_update';
     const ADMIN_SESSION_KEY = 'suivi_taches_admin_mode';
     const SHARED_DATA_URL = './data.json';
+    const SHARED_XLSX_URL = './suivi_taches.xlsx';
     const PARAM_DEFS = [
       { key: 'prestataire', label: 'Prestataire / fournisseur' },
       { key: 'produit', label: 'Produit / matériel' },
@@ -507,6 +508,21 @@
 
     async function loadData() {
       try {
+        if (window.XLSX) {
+          const response = await fetch(`${SHARED_XLSX_URL}?v=${Date.now()}`, { cache: 'no-store' });
+          if (response.ok) {
+            const buffer = await response.arrayBuffer();
+            const workbook = XLSX.read(buffer, { type: 'array' });
+            const next = workbookToData(workbook);
+            if (next) {
+              currentDataSource = 'shared-xlsx';
+              return migrateData(next);
+            }
+          }
+        }
+      } catch {}
+
+      try {
         const response = await fetch(`${SHARED_DATA_URL}?v=${Date.now()}`, { cache: 'no-store' });
         if (response.ok) {
           const sharedRaw = await response.json();
@@ -556,6 +572,13 @@
     }
 
     function getDataSourceMeta() {
+      if (currentDataSource === 'shared-xlsx') {
+        return {
+          label: 'Excel partagé',
+          detail: 'Tout le monde consulte les données de suivi_taches.xlsx.',
+          tone: 'shared'
+        };
+      }
       if (currentDataSource === 'shared') {
         return {
           label: 'JSON partagé',
@@ -579,7 +602,7 @@
       }
       return {
         label: 'Données intégrées',
-        detail: 'Aucun data.json trouvé. Le site utilise les données par défaut intégrées au fichier.',
+        detail: 'Aucun suivi_taches.xlsx ni data.json trouvé. Le site utilise les données par défaut intégrées au fichier.',
         tone: 'default'
       };
     }
@@ -1951,7 +1974,7 @@
       if (dashboardReloadSharedBtn) {
         dashboardReloadSharedBtn.onclick = async () => {
           if (!ensureAdminAccess()) return;
-          const confirmed = confirm('Revenir au contenu de data.json et effacer la copie locale de ce navigateur ?');
+          const confirmed = confirm('Revenir au contenu partagé (suivi_taches.xlsx) et effacer la copie locale de ce navigateur ?');
           if (!confirmed) return;
           await reloadSharedData();
         };
@@ -2259,14 +2282,9 @@
       return raw;
     }
 
-    async function importExcel(file) {
-      if (!window.XLSX) {
-        alert('Librairie Excel indisponible.');
-        return;
-      }
-      const buffer = await file.arrayBuffer();
-      const workbook = XLSX.read(buffer, { type: 'array' });
+    function workbookToData(workbook) {
       const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      if (!sheet) return null;
       const rows = XLSX.utils.sheet_to_json(sheet, { defval: '', raw: true });
       const next = { categories: [] };
 
@@ -2301,7 +2319,19 @@
         category.tasks.push(task);
       });
 
-      if (!next.categories.length) {
+      return next.categories.length ? next : null;
+    }
+
+    async function importExcel(file) {
+      if (!window.XLSX) {
+        alert('Librairie Excel indisponible.');
+        return;
+      }
+      const buffer = await file.arrayBuffer();
+      const workbook = XLSX.read(buffer, { type: 'array' });
+      const next = workbookToData(workbook);
+
+      if (!next) {
         alert('Aucune donnée exploitable trouvée.');
         return;
       }
